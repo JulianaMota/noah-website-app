@@ -8,41 +8,101 @@
       href="https://fonts.googleapis.com/css?family=Lobster|Roboto&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../node_modules/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/app.css" />
     <title>Sign up to Noah Volunteers</title>
   </head>
-  <body id="sign-up-body">
+  <body id="sign-body">
     <header>
-      <img src="app-images/noah-logo_140x73.png" alt="noah volunteers logo" />
-      <h1>Sign in</h1>
-      <img src="" alt="heart-leaf" />
+      <img
+        class="noah-logo"
+        src="app-images/noah-logo_140x73.png"
+        alt="noah volunteers logo"
+      />
+      <h1>Sign up</h1>
+      <img
+        class="heart-leaf"
+        src="app-images/heart-leaf_35x59.png"
+        alt="heart-leaf"
+      />
     </header>
-    <main>
+    <section class="swiper-wrapper">
+    <main class="sign-main swiper-slide">
       <section>
-        <svg></svg>
-        <img src="" alt="facebook logo" />
-        <img src="" alt="google logo" />
+        <div>
+          <a href="tasks.html">
+            <img src="app-images/facebook_40x40.png" alt="facebook logo" />
+          </a>
+          <a href="tasks.html"></a>
+            <img src="app-images/google_40x40.png" alt="google logo" />
+          </a>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254.017 32.044">
+          <path
+            d="M3468.421,589.418h106.017"
+            transform="translate(-3468.421 -574)"
+            fill="none"
+            stroke="#1c7b5b"
+            stroke-width="1"
+          />
+          <path
+            d="M3468.421,589.418h106.017"
+            transform="translate(-3320.421 -574)"
+            fill="none"
+            stroke="#1c7b5b"
+            stroke-width="1"
+          />
+          <g
+            transform="translate(111.579)"
+            fill="#fff"
+            stroke="#1c7b5b"
+            stroke-width="1"
+          >
+            <circle cx="15.5" cy="15.5" r="15.5" stroke="none" />
+            <circle cx="15.5" cy="15.5" r="15" fill="none" />
+          </g>
+          <text
+            transform="translate(115.578 6.044)"
+            fill="#1c7b5b"
+            font-size="14"
+            font-family="Roboto-Regular, Roboto"
+          >
+            <tspan x="5.139" y="13">or</tspan>
+          </text>
+        </svg>
       </section>
       <form action="">
-        <label for="email">
-          <img src="" alt="email icon" />
+        <label for="email" class="form-field">
+          <img src="app-images/mail_36x28.png" alt="email icon" />
           <p>Email</p>
           <input name="email" id="email" type="email" />
         </label>
-        <label for="pass">
-          <img src="" alt="pass icon" />
+        <label for="pass" class="form-field">
+          <img src="app-images/lock_36x28.png" alt="pass icon" />
           <p>Password</p>
           <input name="pass" id="pass" type="password" />
         </label>
-        <label for="repeat-pass">
-          <img src="" alt="pass icon" />
+        <label for="repeat-pass" class="form-field">
+          <img src="app-images/lock_36x28.png" alt="pass icon" />
           <p>Password</p>
           <input name="repeat-pass" id="repeat-pass" type="password" />
         </label>
         <a href="signin.html">Already have an account. <span>Sign in</span></a>
-        <input type="submit" value="" />
+        <button>
+          <img src="" alt="arrow">
+        </button>
       </form>
     </main>
-    <aside></aside>
+    <aside class="swiper-slide">
+      <form action="">
+        <label for="image">
+          <img src="" alt="pass icon" />
+          <p>Image</p>
+          <input name="image" id="image" type="image" />
+        </label>
+      </form>
+    </aside>
+  </section>
+    <script src="../node_modules/swiper/js/swiper.min.js"></script>
   </body>
 </html>

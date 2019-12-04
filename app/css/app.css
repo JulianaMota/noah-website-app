@@ -148,14 +148,82 @@ table {
   --font-size-subtitle2: 20px;
   --font-size-text1: 14px;
   --font-size-text2: 16px;
-  --font-size-title: 30px;
+  --font-size-title: 35px;
+  --font-size-title2: 30px;
+}
+/****************Global classes*******************/
+body {
+  font-family: var(--text-font);
+  font-size: var(--font-size-text2);
+}
+a {
+  text-decoration: none;
+}
+
+.btn-back {
+  background-color: var(--color-green);
+  padding: 10px 40px;
+  width: fit-content;
+  border-radius: 20px;
+  color: var(--color-white);
+  display: flex;
+  font-family: var(--text-font);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--font-size-text2);
+  border: 2px solid var(--color-green);
+}
+
+.btn-no-back {
+  border: 2px solid var(--color-green);
+  padding: 10px 40px;
+  width: fit-content;
+  border-radius: 20px;
+  color: var(--color-green);
+  display: flex;
+  font-family: var(--text-font);
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: var(--font-size-text2);
 }
 
 /****************Body of sign up pages*******************/
+#sign-body {
+  max-width: 700px;
+  height: 100vh;
+  background-image: url(../app-images/sign-back_751x545.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 /****************Sign in an sign up header*******************/
+#sign-body header {
+  height: 35%;
+  position: relative;
+}
+#sign-body header .noah-logo {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+#sign-body header h1 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  font-family: var(--display-font);
+  font-size: var(--font-size-title2);
+  color: var(--color-white);
+}
+#sign-body header .heart-leaf {
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
 
-/****************Welcome Page CSS*******************/
+/****************Welcome Page*******************/
 #welcome-page {
   max-width: 700px;
   height: 100vh;
@@ -164,14 +232,162 @@ table {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
+#welcome-page header {
+  height: 20%;
+  position: relative;
+}
+#welcome-page header img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
 #welcome-page .welcome-section {
   position: relative;
 }
+#welcome-page .welcome-section h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--display-font);
+  color: var(--color-white);
+  font-size: var(--font-size-title);
+}
 #welcome-page .welcome-section img {
   width: 95vw;
+  max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: auto;
+}
+#welcome-page main .sign-section {
+  position: absolute;
+  top: 75vh;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  display: flex;
+  flex-direction: column;
+}
+#welcome-page main .sign-section .btn {
+  margin-top: 10px;
+}
+#welcome-page main .sign-section .btn p {
+  padding: 0 5px;
+}
+
+/****************Sign in main and form*******************/
+.sign-main {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.sign-main form {
+  display: grid;
+  row-gap: 10px;
+}
+.sign-main form a {
+  justify-self: center;
+  font-size: var(--font-size-notes1);
+  color: var(--color-green);
+  padding-top: 10px;
+}
+.sign-main form .submit {
+  justify-self: center;
+}
+
+.sign-main section svg {
+  padding-top: 15px;
+}
+.sign-main section div {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+/****************Form global styling*******************/
+/*******text fields***********/
+.form-field {
+  display: grid;
+  grid-template: auto 1fr / 10% 1fr;
+  row-gap: 10px;
+  padding: 5px 0;
+}
+.form-field img {
+  width: 18px;
+}
+.form-field p {
+  color: var(--color-green);
+  font-weight: bold;
+  font-size: var(--font-size-text2);
+}
+.form-field input {
+  grid-column: 1/3;
+  height: 36px;
+  border: 2px solid var(--color-green);
+  border-radius: 20px;
+  padding: 0 20px;
+  color: var(--color-green);
+  outline: none;
+  font-size: var(--font-size-text2);
+}
+.form-field input::placeholder {
+  color: var(--color-lightblue);
+}
+/**********check box field**********/
+.form-checkbox {
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--color-green);
+  font-weight: bold;
+  height: 20px;
+  justify-self: center;
+}
+.form-checkbox p {
+  align-self: flex-end;
+}
+.form-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+}
+.form-checkbox .check-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 2px solid var(--color-green);
+  border-radius: 6px;
+}
+.form-checkbox input:checked ~ .check-mark {
+  background-color: var(--color-white);
+}
+.check-mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.form-checkbox input:checked ~ .check-mark:after {
+  display: block;
+}
+.form-checkbox .check-mark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--color-green);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
