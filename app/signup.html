@@ -19,24 +19,24 @@
         src="app-images/noah-logo_140x73.png"
         alt="noah volunteers logo"
       />
-      <h1>Sign up</h1>
+      <h1 data-title="signUp">Sign up</h1>
       <img
         class="heart-leaf"
         src="app-images/heart-leaf_35x59.png"
         alt="heart-leaf"
       />
     </header>
-    <section class="swiper-wrapper">
+    <section>
     <main class="sign-main">
         
       <form action="">
-        <section class="signup-grid">
+        <section class="signup-grid" data-form="signUp">
           <section>
             <div class="sign-social">
               <a href="#">
                 <img src="app-images/facebook_40x40.png" alt="facebook logo" />
               </a>
-              <a href="#"></a>
+              <a href="#">
                 <img src="app-images/google_40x40.png" alt="google logo" />
               </a>
             </div>
@@ -91,11 +91,11 @@
             <input name="repeat-pass" id="repeat-pass" type="password" />
           </label>
           <a href="signin.html">Already have an account. <span>Sign in</span></a>
-          <button class="signup-arrow">
+          <button class="signup-arrow" data-btn="arrow">
             <img src="app-images/arrow-signup_38.png" alt="arrow">
           </button>
         </section>
-        <section>
+        <section class="profile-grid" data-form="profile">
           <div class="image-form">
             <img src="app-images/turtle_83.png" alt="pass icon" />
             <p class="field-title">User Image</p>
@@ -108,25 +108,25 @@
             </div>
           </div>
           <label for="first-name" class="form-field">
-            <img src="app-images/lock_36x28.png" alt="user icon" />
+            <img src="app-images/profile_32.png" alt="user icon" />
             <p>First Name
             </p>
             <input name="first-name" id="first-name" type="text" placeholder="xxxx"/>
           </label>
           <label for="last-name" class="form-field">
-            <img src="app-images/lock_36x28.png" alt="user icon"/>
-            <p>First Name
+            <img src="app-images/profile_32.png" alt="user icon"/>
+            <p>Last Name
             </p>
             <input name="last-nam" id="last-name" type="text" placeholder="xxxx"/>
           </label>
           <label for="post-num" class="form-field">
-            <img src="app-images/lock_36x28.png" alt="user icon" />
+            <img src="app-images/house_32.png" alt="user icon" />
             <p>Post Number
             </p>
             <input name="post-num" id="post-num" type="text" placeholder="xxxx"/>
           </label>
           <label for="phone-num" class="form-field">
-            <img src="app-images/lock_36x28.png" alt="user icon" />
+            <img src="app-images/bag_32.png" alt="user icon" />
             <p>Phone Number
             </p>
             <input name="post-num" id="phone-num" type="number" placeholder="xxxxxxxx"/>
@@ -173,106 +173,108 @@
           </label>
           <fieldset>
             <legend class="field-title">What other skills do you have to help Noah?</legend>
-              <div class="sg-grid">
+            <div class="sg-grid">
+           
+                <input type="checkbox" id="design" name="design" /> 
+                <label for="design" class="form-checkbox-sg">
+                  Design
+                </label>
+           
+                <input type="checkbox" id="writing" name="writing" /> 
+                <label for="writing" class="form-checkbox-sg">
+                  Writing 
+                </label>
 
-              <input type="checkbox" id="design" name="design" /> 
-              <label for="design" class="form-checkbox-sg">
-                Design
-              </label>
-
-              <input type="checkbox" id="writing" name="writing" /> 
-              <label for="writing" class="form-checkbox-sg">
-                Writing 
-              </label>
-
-              <input type="checkbox" id="web-dev" name="web-dev" /> 
-              <label for="web-dev" class="form-checkbox-sg">
+                <input type="checkbox" id="web-dev" name="web-dev" /> 
+                <label for="web-dev" class="form-checkbox-sg">
                 Website Dev
-              </label>
+                </label>
+ 
+                <input type="checkbox" id="illus" name="illus" /> 
+                <label for="illus" class="form-checkbox-sg">
+                Illustrations 
+                </label>
 
-              <input type="checkbox" id="illus" name="illus" /> 
-              <label for="illus" class="form-checkbox-sg">
-              Illustrations 
-              </label>
-
-              <input type="checkbox" id="finance" name="finance" /> 
-              <label for="finance" class="form-checkbox-sg">
+                <input type="checkbox" id="finance" name="finance" /> 
+                <label for="finance" class="form-checkbox-sg">
                 Finance
-              </label>
+                </label>
 
-              <input type="checkbox" id="fund" name="fund" /> 
-              <label for="fund" class="form-checkbox-sg">
+                <input type="checkbox" id="fund" name="fund" /> 
+                <label for="fund" class="form-checkbox-sg">
                 Fundraising
-              </label>
+                </label>
 
-              <input type="checkbox" id="research" name="research" /> 
-              <label for="research" class="form-checkbox-sg">
+                <input type="checkbox" id="research" name="research" /> 
+                <label for="research" class="form-checkbox-sg">
                 Research
-              </label>
+                </label>
 
-              <input type="checkbox" id="interviews" name="interviews" /> 
-              <label for="interviews" class="form-checkbox-sg">
+                <input type="checkbox" id="interviews" name="interviews" /> 
+                <label for="interviews" class="form-checkbox-sg">
                 Interviews
-              </label>
+                </label>
 
-              <input type="checkbox" id="video" name="video" />
-              <label for="video" class="form-checkbox-sg">
+                <input type="checkbox" id="video" name="video" />
+                <label for="video" class="form-checkbox-sg">
                 Video 
-              </label>
+                </label>
 
-              <input type="checkbox" id="anim" name="anim" /> 
-              <label for="anim" class="form-checkbox-sg">
+                <input type="checkbox" id="anim" name="anim" /> 
+                <label for="anim" class="form-checkbox-sg">
                 Animation
-              </label>
-            </div>
+                </label>
+
+              </div>
           </fieldset>
           <fieldset>
               <legend class="field-title">Choose 1 or 2 NOAH groups you want to support.</legend>
               <div class="sg-grid">
 
-              <input type="checkbox" id="eco-sex" name="eco-sex" /> 
-              <label for="eco-sex" class="form-checkbox-sg">
-                  Eco-sex
-              </label>
+                <input type="checkbox" id="eco-sex" name="eco-sex" /> 
+                <label for="eco-sex" class="form-checkbox-sg">
+                    Eco-sex
+                </label>
 
-              <input type="checkbox" id="solidarity" name="solidarity" />
-              <label for="solidarity" class="form-checkbox-sg">
-                International solidarity 
-              </label>
+                <input type="checkbox" id="solidarity" name="solidarity" />
+                <label for="solidarity" class="form-checkbox-sg">
+                  International solidarity 
+                </label>
 
-              <input type="checkbox" id="g-formation" name="g-formation" />
-              <label for="g-formation" class="form-checkbox-sg">
-                Green formation 
-              </label>
+                <input type="checkbox" id="g-formation" name="g-formation" />
+                <label for="g-formation" class="form-checkbox-sg">
+                  Green formation 
+                </label>
 
-              <input type="checkbox" id="economic" name="economic" />
-              <label for="economic" class="form-checkbox-sg">
-                Economic Justice 
-              </label>
+                <input type="checkbox" id="economic" name="economic" />
+                <label for="economic" class="form-checkbox-sg">
+                  Economic Justice 
+                </label>
 
-              <input type="checkbox" id="climate" name="climate" />
-              <label for="climate" class="form-checkbox-sg">
-                Climate justice + Energy
-              </label>
+                <input type="checkbox" id="climate" name="climate" />
+                <label for="climate" class="form-checkbox-sg">
+                  Climate justice + Energy
+                </label>
 
-              <input type="checkbox" id="forest-bio" name="forest-bio" /> 
-              <label for="forest-bio" class="form-checkbox-sg">Forests + Biodiversity</label>
+                <input type="checkbox" id="forest-bio" name="forest-bio" /> 
+                <label for="forest-bio" class="form-checkbox-sg">Forests + Biodiversity</label>
 
-              <input type="checkbox" id="food" name="food" />
-              <label for="food" class="form-checkbox-sg">Food sovereignty</label>
+                <input type="checkbox" id="food" name="food" />
+                <label for="food" class="form-checkbox-sg">Food sovereignty</label>
 
-              <input type="checkbox" id="transport" name="transport" />
-              <label for="transport" class="form-checkbox-sg">Transport</label>
-            </div>
-            <p class="explain-text">You can always decide after if you are in doubt.</p>
+                <input type="checkbox" id="transport" name="transport" />
+                <label for="transport" class="form-checkbox-sg">Transport</label>
 
+                <p class="explain-text group-text">You can always decide after if you are in doubt.</p>
+              </div>
+          
             </fieldset>
           </fieldset>
-          <input type="submit" value="">
+          <input id="submit" type="image" src="app-images/arrow-signup_38.png" alt="Submit">
         </section>
       </form>
     </main>
- 
+    <script src="js/app.js"></script>
     <script src="../node_modules/swiper/js/swiper.min.js"></script>
   </body>
 </html>
