@@ -565,5 +565,19 @@ fieldset {
   padding-top: 15px;
 }
 
-/****************Desktp****************/
-@media
+/****************App Header****************/
+.app-header {
+  position: fixed;
+  top: 0;
+  background-image: url(../app-images/back-app_751x308.png);
+  background-repeat: no-repeat;
+  height: 60%;
+}
+
+/****************App Nav****************/
+.nav-bar {
+  position: fixed;
+  bottom: 0;
+}
+/****************Desktop****************/
+/* @media */
