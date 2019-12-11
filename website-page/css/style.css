@@ -203,7 +203,7 @@ main {
 }
 
 /******************fourth section of grid**********************/
-.modals {
+.modalsGrid {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(3, auto);
@@ -277,7 +277,7 @@ main {
 .fagGrid {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: auto 47px auto 47px auto;
   height: 585px;
 }
 
@@ -300,16 +300,18 @@ main {
 .title4 {
   grid-column: 1/2;
   grid-row: 2/3;
-  text-align: start;
+  width: 428px;
   font-size: 20px;
   font-weight: 700;
+  justify-self: center;
 }
 .p1 {
   grid-column: 1/2;
   grid-row: 3/4;
-  text-align: start;
+  width: 428px;
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: 300;
+  justify-self: center;
 }
 
 .questionIcon2 {
@@ -321,16 +323,18 @@ main {
 .title5 {
   grid-column: 2/3;
   grid-row: 2/3;
-  text-align: start;
+  width: 428px;
   font-size: 20px;
   font-weight: 700;
+  justify-self: center;
 }
 .p2 {
   grid-column: 2/3;
   grid-row: 3/4;
-  text-align: start;
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: 300r;
+  width: 428px;
+  justify-self: center;
 }
 
 .questionIcon3 {
@@ -343,16 +347,18 @@ main {
 .title6 {
   grid-column: 1/2;
   grid-row: 4/5;
-  text-align: start;
+  width: 428px;
   font-size: 20px;
   font-weight: 700;
+  justify-self: center;
 }
 .p3 {
   grid-column: 1/2;
   grid-row: 5/6;
-  text-align: start;
+  width: 428px;
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: 300;
+  justify-self: center;
 }
 
 .questionIcon4 {
@@ -364,14 +370,16 @@ main {
 .title7 {
   grid-column: 2/3;
   grid-row: 4/5;
-  text-align: start;
+  width: 428px;
   font-size: 20px;
   font-weight: 700;
+  justify-self: center;
 }
 .p4 {
   grid-column: 2/3;
   grid-row: 5/6;
-  text-align: start;
+  justify-self: center;
   font-size: 16px;
-  font-weight: lighter;
+  font-weight: 300;
+  width: 428px;
 }
