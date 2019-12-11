@@ -4,7 +4,56 @@
   margin: 0;
 }
 
-body.mainGrid {
+body {
   font-family: "Roboto", sans-serif;
   background-color: #efedea;
+}
+
+nav {
+  width: 100%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 650px auto;
+  grid-template-rows: repeat(3, 200px);
+  column-gap: 78px;
+}
+
+.h1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  justify-self: center;
+  width: 500px;
+  padding-top: 50px;
+}
+
+.text {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  margin: 0 80px;
+  width: 410px;
+  padding-top: 30px;
+}
+
+.active {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  width: 255px;
+  height: 66px;
+  background-color: #48a250;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 80px;
+}
+
+.illustration {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  width: 707px;
+  height: 559px;
 }
