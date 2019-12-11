@@ -151,6 +151,7 @@ table {
   --font-size-title: 35px;
   --font-size-title2: 30px;
 }
+
 /****************Global classes*******************/
 body {
   font-family: var(--text-font);
@@ -159,7 +160,6 @@ body {
 a {
   text-decoration: none;
 }
-
 .btn-back {
   background-color: var(--color-green);
   padding: 10px 40px;
@@ -173,7 +173,6 @@ a {
   font-size: var(--font-size-text2);
   border: 1.5px solid var(--color-green);
 }
-
 .btn-no-back {
   border: 1.5px solid var(--color-green);
   padding: 10px 40px;
@@ -307,6 +306,7 @@ a {
   margin: auto;
   justify-items: center;
 }
+
 /****************Form global styling*******************/
 
 /*******text fields***********/
@@ -365,6 +365,7 @@ a {
   background-size: 6px 6px, 6px 6px, 3.5em 3.5em;
   background-repeat: no-repeat;
 }
+
 /**********check box field**********/
 .form-checkbox {
   display: flex;
@@ -421,6 +422,7 @@ a {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 /****************Form Sign up grid*******************/
 .signup-grid {
   display: grid;
@@ -438,6 +440,7 @@ a {
   /* display: none; */
   padding-bottom: 20px;
 }
+
 /****************Animation between sign up and profile*******************/
 .moveSingUp {
   transition: 2s;
@@ -447,6 +450,7 @@ a {
   transition: 2s;
   transform: translateX(0);
 }
+
 /****************Form Sign up arrow*******************/
 .signup-arrow {
   background-color: transparent;
@@ -508,6 +512,7 @@ input.user-image[type="radio"]:checked + label {
   grid-column: 1/2;
   grid-row: 1/4;
 }
+
 /*****************Form title and explain test classes **************/
 .field-title {
   color: var(--color-green);
@@ -569,15 +574,98 @@ fieldset {
 .app-header {
   position: fixed;
   top: 0;
-  background-image: url(../app-images/back-app_751x308.png);
+  background-image: url(../app-images/back-app_751x307.png);
   background-repeat: no-repeat;
-  height: 60%;
+  background-size: contain;
+  background-position: center top;
+  width: 100vw;
+  height: 25vh;
+  z-index: 1;
+}
+.app-logo {
+  position: absolute;
+  width: 70px;
+  padding: 10px;
+}
+.app-header h1 {
+  position: relative;
+  text-align: center;
+  font-family: var(--display-font);
+  font-size: var(--font-size-title2);
+  color: var(--color-white);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.app-header .illustration {
+  position: relative;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -30%);
+}
+.app-header button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  left: -20%;
+}
+.app-header button img {
+  width: 35px;
+}
+.search-list li {
+  font-size: 50px;
 }
 
 /****************App Nav****************/
 .nav-bar {
   position: fixed;
   bottom: 0;
+  background-color: var(--color-grey);
+  width: 100vh;
 }
+.nav-bar svg .stroke-color {
+  stroke: var(--color-green);
+}
+.nav-bar svg .fill-color {
+  fill: var(--color-green);
+}
+.nav-bar svg .current-fill {
+  fill: var(--color-yellow);
+}
+.nav-bar svg .current-stroke {
+  stroke: var(--color-yellow);
+}
+.nav-bar .current-link {
+  color: var(--color-yellow);
+}
+.nav-bar a {
+  color: var(--color-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-size-notes1);
+}
+.nav-bar a svg {
+  padding-bottom: 3px;
+}
+.nav-bar .nav-grid {
+  display: grid;
+  grid-template: 55px / auto auto auto auto auto;
+  width: 100vw;
+  align-items: center;
+}
+
 /****************Desktop****************/
-/* @media */
+@media (min-width: 641px) {
+  body {
+    /* background-color: black; */
+    /* padding: 0 10%; */
+    /* margin: 0 20px; */
+    width: 50vw;
+    margin: auto;
+    position: relative;
+  }
+  .app-header {
+    width: 50vw;
+  }
+}
