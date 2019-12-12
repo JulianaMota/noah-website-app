@@ -258,9 +258,25 @@ main {
 .five {
   width: 39px;
   position: absolute;
-  top: 50%;
+  top: 38%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-38%, -50%);
+}
+
+.ten {
+  width: 39px;
+  position: absolute;
+  top: 30%;
+  left: 49%;
+  /* transform: translate(-30%, -49%); */
+}
+
+.one {
+  width: 39px;
+  position: absolute;
+  top: 57%;
+  left: 45.5%;
+  /* transform: translate(-50%, -50%); */
 }
 
 /******************fourth section of grid**********************/
