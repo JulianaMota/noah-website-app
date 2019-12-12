@@ -620,16 +620,16 @@ fieldset {
   background-color: var(--color-grey);
   width: 100vh;
 }
-.nav-bar svg .stroke-color {
+.stroke-color {
   stroke: var(--color-green);
 }
-.nav-bar svg .fill-color {
+.fill-color {
   fill: var(--color-green);
 }
-.nav-bar svg .current-fill {
+.current-fill {
   fill: var(--color-yellow);
 }
-.nav-bar svg .current-stroke {
+.current-stroke {
   stroke: var(--color-yellow);
 }
 .nav-bar .current-link {
