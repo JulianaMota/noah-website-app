@@ -160,7 +160,8 @@ body {
 a {
   text-decoration: none;
 }
-input {
+input,
+button {
   outline: none;
 }
 input:focus {
@@ -578,7 +579,7 @@ fieldset {
   background-position: center top;
   width: 100vw;
   height: 25vh;
-  z-index: 1;
+  z-index: 3;
 }
 .app-logo {
   position: absolute;
@@ -608,6 +609,7 @@ fieldset {
   left: 3%;
   top: 50%;
   outline: none;
+  z-index: 4;
 }
 .app-header button img {
   width: 35px;
@@ -619,6 +621,7 @@ fieldset {
   bottom: 0;
   background-color: var(--color-grey);
   width: 100vh;
+  box-shadow: 0px -5px 8px -1px rgba(0, 0, 0, 0.24);
 }
 .stroke-color {
   stroke: var(--color-green);
@@ -656,6 +659,8 @@ fieldset {
 .search-main {
   margin-top: 25vh;
   padding: 0 20px;
+  margin-bottom: 70px;
+  position: relative;
 }
 
 /***************Search button *******/
@@ -748,7 +753,6 @@ fieldset {
   display: grid;
   grid-template: auto / auto auto;
   column-gap: 10px;
-  /* display: flex; */
 }
 .volunteer-grid li {
   padding: 5px 10px;
@@ -759,6 +763,186 @@ fieldset {
   justify-content: center;
   text-align: center;
 }
+
+/****************tasks filters****************/
+.tasks-filters {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  column-gap: 10px;
+  justify-items: center;
+}
+.tasks-filters button {
+  padding: 0;
+  width: 100%;
+  padding: 7px 0;
+  justify-content: center;
+}
+.tasks-filters button p {
+  padding-left: 5px;
+}
+
+/****************one tasks styling ****************/
+.task-grid {
+  background-color: var(--color-grey);
+  border-radius: 20px;
+  display: grid;
+  grid-template: auto auto auto 1fr / auto 1fr;
+  padding: 15px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.tasks-title {
+  font-size: var(--font-size-subtitle2);
+  color: var(--color-lightblue);
+}
+.favorites-button {
+  background-color: transparent;
+  border: none;
+  justify-self: right;
+}
+.task-skill {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.task-skill li {
+  padding: 7px 30px;
+  font-size: var(--font-size-notes1);
+  background-color: var(--color-lightblue);
+  border: var(--color-lightblue);
+}
+.tasks-contact {
+  font-size: var(--font-size-text1);
+  color: var(--color-green);
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.tasks-text {
+  color: var(--color-green);
+  font-size: var(--font-size-text1);
+  grid-column: 1/3;
+}
+.tasks-btn {
+  background-color: var(--color-lightblue);
+  grid-column: 1/3;
+  grid-row: 4/5;
+  border: var(--color-lightblue);
+  padding: 10px 25px;
+  font-size: var(--font-size-text2);
+  font-weight: 600;
+  justify-self: right;
+}
+
+/****************one activity styling ****************/
+.activ-date {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+}
+.activ-place {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: flex;
+}
+.activ-place a,
+.activ-date p {
+  padding-left: 5px;
+  color: var(--color-green);
+  font-size: var(--font-size-text1);
+}
+
+/****************one idea styling ****************/
+.ideas-user {
+  display: grid;
+  grid-template: 1fr / auto 1fr;
+  column-gap: 5px;
+}
+.ideas-user img,
+.ideas-user p {
+  align-self: center;
+  color: var(--color-yellow);
+  font-size: var(--font-size-subtitle2);
+}
+.ideas-contact {
+  grid-row: 3/4;
+}
+.ideas-votes {
+  grid-row: 4/5;
+  grid-column: 1/2;
+  color: var(--color-green);
+  font-weight: bold;
+  align-self: center;
+}
+.add-idea-btn {
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+}
+.add-idea-btn i {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+/****************add idea  styling ****************/
+.idea-main {
+  display: grid;
+  row-gap: 20px;
+  width: 70%;
+  margin: 25vh auto 70px auto;
+}
+.idea-main h2 {
+  font-family: var(--display-font);
+  font-size: var(--font-size-subtitle1);
+  color: var(--color-green);
+  text-align: center;
+}
+.idea-form {
+  display: grid;
+  row-gap: 10px;
+}
+textarea {
+  border: solid 1.5px var(--color-green);
+  border-radius: 20px;
+  grid-column: 1/3;
+  padding: 20px;
+  font-family: var(--text-font);
+  font-size: var(--font-size-text2);
+  outline: none;
+  color: var(--color-green);
+}
+textarea::placeholder {
+  color: var(--color-lightblue);
+}
+textarea:focus {
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+}
+.idea-submit {
+  justify-self: center;
+}
+.idea-main a {
+  color: var(--color-green);
+  font-weight: 600;
+  display: grid;
+  grid-template: 1fr / auto 1fr;
+  column-gap: 10px;
+  padding-top: 10px;
+}
+.idea-main a img {
+  transform: rotate(90deg);
+  align-self: center;
+}
+
+/****************groups  styling ****************/
+
+
 /****************Desktop****************/
 @media (min-width: 641px) {
   body {

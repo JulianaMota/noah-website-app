@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
     <title>NOAH Tasks</title>
   </head>
   <body>
@@ -17,28 +23,28 @@
         alt="illustration"
       />
       <button>
-        <img src="app-images/interrogation-icon@2x.png" alt="question marc" />
+        <img src="app-images/interrogation-icon_58.png" alt="question marc" />
       </button>
     </header>
     <main class="search-main">
-      <section>
-        <button>
-          <img src="" alt="icon tasks" />
+      <section class="tasks-filters">
+        <button class="btn-back">
+          <img src="app-images/list-white_16.png" alt="icon tasks" />
           <p>Tasks</p>
         </button>
-        <button>
-          <img src="" alt="icon activities" />
+        <button class="btn-back">
+          <img src="app-images/calendar-white_16.png" alt="icon activities" />
           <p>Activities</p>
         </button>
-        <button>
-          <img src="" alt="icon ideas" />
+        <button class="btn-back">
+          <img src="app-images/pencil_16.png" alt="icon ideas" />
           <p>Ideas</p>
         </button>
       </section>
-      <ul data-list="tasks">
-        <li>
-          <h2>Article about Deforestation</h2>
-          <button>
+      <ul data-list="tasks" class="list">
+        <li class="task-grid">
+          <h2 class="tasks-title">Article about Deforestation</h2>
+          <button class="favorites-button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -63,23 +69,101 @@
               </g>
             </svg>
           </button>
-          <p>
+          <p class="tasks-text">
             Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at
             placerat tincidunt.
           </p>
-          <ul>
-            <li>Writing</li>
+          <ul class="task-skill">
+            <li class="btn-back">Writing</li>
           </ul>
-          <p>contact: kathc@gmail.com</p>
-          <button>Apply</button>
+          <p class="tasks-contact">contact: <span>kathc@gmail.com</span></p>
+          <button class="tasks-btn btn-back">Apply</button>
         </li>
       </ul>
-      <ul data-list="activities">
-        <li></li>
+      <ul data-list="activities" class="list">
+        <li class="task-grid">
+          <h2 class="tasks-title">Clean waste Amager Beach</h2>
+          <button class="favorites-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="20.063"
+              viewBox="0 0 22 20.063"
+            >
+              <g transform="translate(1 0)">
+                <path
+                  class="stroke-color"
+                  d="M18.426,1.624a5.374,5.374,0,0,0-7.649,0l-.752.752-.752-.752A5.409,5.409,0,0,0,1.624,9.273l8.4,8.4,8.4-8.4a5.374,5.374,0,0,0,0-7.649"
+                  transform="translate(-0.025 0.975)"
+                  fill="none"
+                  stroke-width="2"
+                  fill-rule="evenodd"
+                />
+                <rect
+                  width="20"
+                  height="20"
+                  transform="translate(0)"
+                  fill="none"
+                />
+              </g>
+            </svg>
+          </button>
+          <div class="activ-date">
+            <img src="app-images/calendar-green_16.png" alt="calendar icon" />
+            <p>
+              <span>25.01.20</span> <span>09:00</span> to <span>12:00</span>
+            </p>
+          </div>
+          <div class="activ-place">
+            <img src="app-images/places_16.png" alt="place icon" /><a href=""
+              >Strandevej 10</a
+            >
+          </div>
+          <p class="tasks-contact">contact: <span>kathc@gmail.com</span></p>
+          <button class="tasks-btn btn-back">Join</button>
+        </li>
       </ul>
-      <ul data-list="ideas">
-        <li>1</li>
+      <ul data-list="ideas" class="list">
+        <li class="task-grid">
+          <h2 class="tasks-title">
+            Undersigned for Sustainable Energy in all Denmark
+          </h2>
+
+          <button class="favorites-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="20.063"
+              viewBox="0 0 22 20.063"
+            >
+              <g transform="translate(1 0)">
+                <path
+                  class="stroke-color"
+                  d="M18.426,1.624a5.374,5.374,0,0,0-7.649,0l-.752.752-.752-.752A5.409,5.409,0,0,0,1.624,9.273l8.4,8.4,8.4-8.4a5.374,5.374,0,0,0,0-7.649"
+                  transform="translate(-0.025 0.975)"
+                  fill="none"
+                  stroke-width="2"
+                  fill-rule="evenodd"
+                />
+                <rect
+                  width="20"
+                  height="20"
+                  transform="translate(0)"
+                  fill="none"
+                />
+              </g>
+            </svg>
+          </button>
+          <div class="ideas-user">
+            <img src="app-images/turtle_26px.png" alt="user img" />
+            <p>Aaron</p>
+          </div>
+          <p class="tasks-contact ideas-contact">amorthen@gmail.com</p>
+          <p class="ideas-votes"><span>10</span> votes</p>
+          <button class="tasks-btn btn-back">Vote to Project</button>
+        </li>
       </ul>
+      <a href="idea.html" class="add-idea-btn"><i class="fas fa-plus"></i></a>
     </main>
     <nav class="nav-bar">
       <ul class="nav-grid">
