@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../node_modules/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap"
@@ -38,16 +39,41 @@
         Volunteer <span style="color:#25853a;font-size:30px">Testimonial</span>
       </h1>
       <h2 class="subtitle">Get to know our volunteers</h2>
-      <div class="container">
-        <img class="girl" src="images/girl.png" alt="girl" />
-        <h2 class="name">Danielle Meyer</h2>
-        <p class="introduction">
-          Pellentesque tincidunt tristique neque, eget venenatis enim gravida
-          quis. Fusce at egestas libero. Cras convallis egestas ullamcorper.
-          Suspendisse sed ultricies nisl, pharetra rutrum mauris. Vestibulum at
-          massa dui. Morbi et purus velit. Etiam tristique, justo eu condimentum
-          efficitur, purus velit 
+     
+      <!-- Slider main container -->
+        <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="container swiper-slide">
+                <img class="girl" src="images/girl.png" alt="girl" />
+                <h2 class="name">Danielle Meyer</h2>
+                <p class="introduction">
+                Pellentesque tincidunt tristique neque, eget venenatis enim gravida
+                quis. Fusce at egestas libero. Cras convallis egestas ullamcorper.
+                Suspendisse sed ultricies nisl, pharetra rutrum mauris. Vestibulum at
+                massa dui. Morbi et purus velit. Etiam tristique, justo eu condimentum
+                efficitur, purus velit 
+            </div>
+
+            <div class="container swiper-slide">
+                    <img class="girl" src="images/girl.png" alt="girl" />
+                    <h2 class="name">Danielle Meyer</h2>
+                    <p class="introduction">
+                    Pellentesque tincidunt tristique neque, eget venenatis enim gravida
+                    quis. Fusce at egestas libero. Cras convallis egestas ullamcorper.
+                    Suspendisse sed ultricies nisl, pharetra rutrum mauris. Vestibulum at
+                    massa dui. Morbi et purus velit. Etiam tristique, justo eu condimentum
+                    efficitur, purus velit 
+                </div>
+        </div>
+        <!--  navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
     </div>
+    
+    
+
     </section>
     
     <section class="mapGrid">
@@ -129,6 +155,8 @@
 </div>
 
     <footer><img src="images/footer.png" /></footer>
-    <script src="./js/javascript.js"></script>
+    
+    <script src="../node_modules/swiper/js/swiper.min.js"></script>
+            <script src="js/script.js"></script>
   </body>
 </html>
