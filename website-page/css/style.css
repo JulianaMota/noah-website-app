@@ -156,18 +156,24 @@ main {
 }
 
 .swiper-button-prev {
+  position: relative;
+  top: 51%;
+  left: 280%;
   /* grid-column: 1/2;
   grid-row: 3/4; */
-  padding-top: 765px;
-  padding-left: 140px;
+  /* padding-top: 765px;
+  padding-left: 140px; */
   color: black;
 }
 
 .swiper-button-next {
+  position: relative;
+  top: 45%;
+  right: -2440%;
   /* grid-column: 3/4;
   grid-row: 3/4; */
-  padding-top: 765px;
-  padding-right: 140px;
+  /* padding-top: 765px;
+  padding-right: 140px; */
   color: black;
 }
 
