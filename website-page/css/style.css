@@ -88,19 +88,19 @@ main {
   padding: 30px;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: 50px 1fr 50px;
 }
 
 .title {
   grid-row: 1/2;
-  /* grid-column: 1/4; */
+  grid-column: 1/4;
   text-align: center;
   height: 55px;
 }
 
 .subtitle {
   grid-row: 2/3;
-  /* grid-column: 1/4; */
+  grid-column: 1/4;
   text-align: center;
   height: 70px;
 }
@@ -145,6 +145,8 @@ main {
 }
 
 .swiper-container {
+  grid-column: 2/3;
+  grid-row: 3/4;
   width: 929px;
   height: 306px;
 }
@@ -154,12 +156,16 @@ main {
 }
 
 .swiper-button-prev {
+  /* grid-column: 1/2;
+  grid-row: 3/4; */
   padding-top: 765px;
   padding-left: 140px;
   color: black;
 }
 
 .swiper-button-next {
+  /* grid-column: 3/4;
+  grid-row: 3/4; */
   padding-top: 765px;
   padding-right: 140px;
   color: black;
@@ -328,7 +334,7 @@ main {
   grid-template-columns: auto auto;
   grid-template-rows: auto 47px auto 47px auto;
   height: 585px;
-  column-gap: 30px;
+  /* column-gap: 30px; */
 }
 
 .fag {
@@ -341,6 +347,8 @@ main {
 }
 
 .questionIcon1 {
+  position: relative;
+  left: 22%;
   grid-column: 1/2;
   grid-row: 2/3;
   width: 24px;
@@ -366,6 +374,8 @@ main {
 }
 
 .questionIcon2 {
+  position: relative;
+  left: 22%;
   grid-column: 2/3;
   grid-row: 2/3;
   width: 24px;
@@ -390,6 +400,8 @@ main {
 }
 
 .questionIcon3 {
+  position: relative;
+  left: 22%;
   grid-column: 1/2;
   grid-row: 4/5;
   width: 24px;
@@ -415,11 +427,12 @@ main {
 }
 
 .questionIcon4 {
+  position: relative;
+  left: 22%;
   grid-column: 2/3;
   grid-row: 4/5;
   width: 24px;
   height: 24px;
-  justify-self: center;
 }
 .title7 {
   grid-column: 2/3;
