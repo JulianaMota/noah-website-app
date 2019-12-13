@@ -280,8 +280,8 @@ main {
 }
 
 /* The Modal (background) */
-.map-modal {
-  /* display: none; */
+.map-modal-background {
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -294,7 +294,7 @@ main {
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modal-content-box {
   background-color: #ffffff;
   margin: 15% auto;
   padding: 20px;
@@ -315,6 +315,36 @@ main {
 .five:hover,
 .ten:hover {
   cursor: pointer;
+}
+
+.modal-content-grid {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 30px, auto, 30px;
+  grid-row-gap: 15px;
+  /* width: 734px; */
+}
+
+.modal-content-title {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal-content-img {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  width: 700px;
+}
+
+.modal-content-text {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  width: 700px;
 }
 
 /******************fourth section of grid**********************/

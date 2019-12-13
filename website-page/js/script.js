@@ -8,18 +8,22 @@ var swiper = new Swiper(".swiper-container", {
 });
 
 // Get the modal
-let modal = document.getElementById("mapModal");
+let modal = document.getElementById("mapModalBackground");
 
 // Get the img that opens the modal
-let btn = document.querySelectorAll("#one, #five, #ten");
+const btn = document.querySelectorAll("#one, #five, #ten");
+console.log(btn);
 
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-};
+btn.forEach(
+  btn =>
+    (btn.onclick = function() {
+      modal.style.display = "block";
+    })
+);
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
