@@ -7,6 +7,16 @@ var swiper = new Swiper(".swiper-container", {
   }
 });
 
+var swiperTwo = new Swiper(".swiper-container2", {
+  navigation: {
+    pagination: {
+      el: ".swiper-pagination"
+    },
+    nextEl: ".swiper-button-next2",
+    prevEl: ".swiper-button-prev2"
+  }
+});
+
 // Get the modal
 let modal = document.getElementById("mapModalBackground");
 
