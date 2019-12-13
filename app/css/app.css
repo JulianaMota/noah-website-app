@@ -940,7 +940,7 @@ textarea:focus {
   align-self: center;
 }
 
-/****************groups  styling ****************/
+/****************groups map  styling ****************/
 #groups-body main {
   position: relative;
   width: 100%;
@@ -1031,6 +1031,31 @@ textarea:focus {
 }
 #groups-body main .btn-vib img {
   width: 15px;
+}
+
+/****************groups modal styling ****************/
+.group-modal {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+.group-modal h2 {
+  font-family: var(--display-font);
+  font-size: var(--font-size-subtitle1);
+  color: var(--color-white);
+}
+.carousel-container {
+}
+.carousel-wrapper {
+}
+.one-slide {
+  background-color: var(--color-grey);
+  border-radius: 20px;
+  width: 60%;
+  padding: 20px;
 }
 
 /****************Desktop****************/

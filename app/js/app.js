@@ -17,5 +17,4 @@ function changeToProfile(event) {
   signUp.classList.add("moveSingUp");
   const profile = document.querySelector("[data-form=profile]");
   profile.classList.add("moveProfile");
-  //   profile.style.display = "grid";
 }

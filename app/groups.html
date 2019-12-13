@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../node_modules/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <title>NOAH Groups</title>
   </head>
@@ -53,7 +54,60 @@
       </button>
     </main>
 
-    <section class="group-modal"></section>
+    <section class="group-modal">
+      <h2>Copenhagen</h2>
+      <div class="swiper-container carousel-container">
+        <div class="swiper-wrapper carousel-wrapper">
+          <!-- sliders -->
+          <div class="swiper-slide one-slide">
+            <div>
+              <h3>
+                Marine Savers
+              </h3>
+              <button class="favorites-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="20.063"
+                  viewBox="0 0 22 20.063"
+                >
+                  <g transform="translate(1 0)">
+                    <path
+                      class="stroke-color"
+                      d="M18.426,1.624a5.374,5.374,0,0,0-7.649,0l-.752.752-.752-.752A5.409,5.409,0,0,0,1.624,9.273l8.4,8.4,8.4-8.4a5.374,5.374,0,0,0,0-7.649"
+                      transform="translate(-0.025 0.975)"
+                      fill="none"
+                      stroke-width="2"
+                      fill-rule="evenodd"
+                    />
+                    <rect
+                      width="20"
+                      height="20"
+                      transform="translate(0)"
+                      fill="none"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <div>
+              <p>Place: <span>Strandvejen 125, 2900 Hellerup</span></p>
+              <p>Meetings: <span>Wed, 5pm - 7pm</span></p>
+              <p>Team:</p>
+              <ul>
+                <li><img src="" alt="user image" />Name</li>
+                <li><img src="" alt="user image" />Name</li>
+                <li><img src="" alt="user image" />Name</li>
+                <li><img src="" alt="user image" />Name</li>
+              </ul>
+              <button>Try</button>
+              <button>Join</button>
+            </div>
+          </div>
+          <!-- sliders -->
+        </div>
+      </div>
+    </section>
 
     <nav class="nav-bar">
       <ul class="nav-grid">
@@ -187,5 +241,7 @@
         </li>
       </ul>
     </nav>
+    <script src="js/app.js"></script>
+    <script src="../node_modules/swiper/js/swiper.min.js"></script>
   </body>
 </html>
