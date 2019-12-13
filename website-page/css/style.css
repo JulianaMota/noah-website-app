@@ -70,11 +70,15 @@ main {
   display: none;
 } */
 
-.sticky {
+.sticky,
+.bar {
   position: sticky;
   position: -webkit-sticky;
-  top: 20px;
+  top: 0;
   z-index: 100;
+  height: 10%;
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .illustration {
@@ -109,6 +113,7 @@ main {
   /* grid-column: 2/3; */
   grid-row: 3/4;
   justify-self: center;
+  /*****%****/
   width: 929px;
   height: 306px;
   border-radius: 10px;
@@ -151,11 +156,11 @@ main {
   height: 306px;
 }
 
-.swiper-wrapper {
+/* .swiper-wrapper {
   width: 100%;
-}
+} */
 
-.swiper-button-prev {
+.btn1 {
   position: relative;
   top: 51%;
   left: 280%;
@@ -166,10 +171,10 @@ main {
   color: black;
 }
 
-.swiper-button-next {
+.btn2 {
   position: relative;
-  top: 45%;
-  right: -2440%;
+  top: 51%;
+  right: 240%;
   /* grid-column: 3/4;
   grid-row: 3/4; */
   /* padding-top: 765px;
@@ -346,6 +351,10 @@ main {
   line-height: 1.6;
   width: 700px;
 }
+
+/* .btn3 {
+  color: black;
+} */
 
 /******************fourth section of grid**********************/
 .modalsGrid {

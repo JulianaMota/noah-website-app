@@ -1,19 +1,19 @@
 "use strict";
 
-var swiper = new Swiper(".swiper-container", {
+var swiper = new Swiper(".s1", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
   }
 });
 
-var swiperTwo = new Swiper(".swiper-container2", {
+var swiperTwo = new Swiper(".s2", {
   navigation: {
     pagination: {
       el: ".swiper-pagination"
     },
-    nextEl: ".swiper-button-next2",
-    prevEl: ".swiper-button-prev2"
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
   }
 });
 
