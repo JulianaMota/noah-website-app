@@ -9,7 +9,6 @@ function init() {
 }
 
 function changeToProfile(event) {
-  console.log("work");
   event.preventDefault();
   const title = document.querySelector("[data-title=signUp]");
   title.textContent = "Profile";

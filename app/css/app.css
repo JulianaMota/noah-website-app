@@ -656,8 +656,8 @@ fieldset {
   align-items: center;
 }
 
-/********************** Search Main**************/
-.search-main {
+/********************** Main app pages**************/
+.app-main {
   margin-top: 25vh;
   padding: 0 20px;
   margin-bottom: 70px;
@@ -665,11 +665,11 @@ fieldset {
 }
 
 /***************Search button *******/
-.search-main .search-field {
+.search-field {
   padding: 10px 20px;
   margin: auto;
 }
-.search-main .search-field input {
+.search-field input {
   outline: none;
   border: none;
   padding-left: 10px;
@@ -677,13 +677,13 @@ fieldset {
   font-size: var(--font-size-text2);
   color: var(--color-green);
 }
-.search-main .search-field:focus-within {
+.search-field:focus-within {
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
 }
-.search-main .search-field input:focus {
+.search-field input:focus {
   box-shadow: none;
 }
-.search-main .search-field input::placeholder {
+.search-field input::placeholder {
   color: var(--color-lightblue);
 }
 /**********Search filters************/
@@ -899,7 +899,7 @@ fieldset {
   width: 70%;
   margin: 25vh auto 70px auto;
 }
-.idea-main h2 {
+.title-style {
   font-family: var(--display-font);
   font-size: var(--font-size-subtitle1);
   color: var(--color-green);
@@ -1042,6 +1042,7 @@ textarea:focus {
   width: 100%;
   height: 100%;
   background-color: rgb(0, 0, 0, 0.5);
+  display: none;
 }
 .group-modal h2 {
   font-family: var(--display-font);
@@ -1050,9 +1051,12 @@ textarea:focus {
   padding-bottom: 20px;
 }
 .carousel-container {
-  /* width: 60%; */
+  position: relative;
+  top: 20%;
+  margin: 0 20px;
 }
-.carousel-wrapper {
+.s-c {
+  width: 100%;
 }
 .one-slide {
   background-color: var(--color-lightblue);
@@ -1077,7 +1081,9 @@ textarea:focus {
 .one-slide li {
   color: var(--color-lightblue);
   font-weight: 400;
-  /* text-align: center; */
+}
+.one-slide li img {
+  margin-right: 5px;
 }
 .image-slide {
   height: 118px;
@@ -1107,6 +1113,44 @@ textarea:focus {
 .group-buttons button {
   padding: 10px 30px;
 }
+
+/**************** Favorites styling *******************/
+
+/******** filters**************/
+.favorites-filters {
+  display: flex;
+  justify-content: space-around;
+}
+.favorites-filters button {
+  padding: 10px 13px;
+}
+/******** favorites list **************/
+.favorites-list {
+  display: grid;
+  row-gap: 15px;
+  padding-top: 20px;
+}
+.favorites-list svg path {
+  fill: var(--color-green);
+}
+
+/************** Settings page styling *************/
+.profile-settings {
+  display: grid;
+}
+.profile-settings h2 {
+  font-size: var(--font-size-subtitle1);
+  color: var(--color-yellow);
+}
+.profile-settings p,
+.profile-settings .set-email {
+  color: var(--color-green);
+}
+.profile-settings .set-edit {
+  color: var(--color-lightblue);
+  font-size: var(--font-size-text1);
+}
+
 /****************Desktop****************/
 @media (min-width: 641px) {
   body {
