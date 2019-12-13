@@ -191,6 +191,7 @@ input:focus {
   text-decoration: none;
   font-weight: 600;
   font-size: var(--font-size-text2);
+  background-color: transparent;
 }
 
 /****************Body of sign up pages*******************/
@@ -1046,18 +1047,66 @@ textarea:focus {
   font-family: var(--display-font);
   font-size: var(--font-size-subtitle1);
   color: var(--color-white);
+  padding-bottom: 20px;
 }
 .carousel-container {
+  /* width: 60%; */
 }
 .carousel-wrapper {
 }
 .one-slide {
-  background-color: var(--color-grey);
+  background-color: var(--color-lightblue);
   border-radius: 20px;
-  width: 60%;
+  width: 65%;
+  background-image: url(../app-images/tree-trunk-569275_1920.jpg);
+  background-size: contain;
+}
+.one-slide h3 {
+  font-size: var(--font-size-subtitle2);
+  font-weight: bold;
+  color: var(--color-white);
+  align-self: flex-end;
+  padding-bottom: 5px;
+}
+.one-slide p {
+  color: var(--color-green);
+  font-size: var(--font-size-text2);
+  font-weight: bold;
+}
+.one-slide p span,
+.one-slide li {
+  color: var(--color-lightblue);
+  font-weight: 400;
+  /* text-align: center; */
+}
+.image-slide {
+  height: 118px;
+  display: grid;
+  grid-template: 1fr / 1fr auto;
   padding: 20px;
 }
-
+.image-slide .favorites-button {
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+.group-info {
+  display: grid;
+  row-gap: 15px;
+  background-color: var(--color-grey);
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+}
+.group-team {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+}
+.group-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.group-buttons button {
+  padding: 10px 30px;
+}
 /****************Desktop****************/
 @media (min-width: 641px) {
   body {
