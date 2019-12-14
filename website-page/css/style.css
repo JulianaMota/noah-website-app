@@ -336,7 +336,7 @@ main {
 
 .modal-content-grid {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   grid-template-columns: 30px, auto, 30px;
   grid-row-gap: 15px;
   /* width: 734px; */
@@ -369,6 +369,14 @@ main {
   color: black;
 }
 
+.swiper-pagination {
+  grid-row: 4/5;
+  grid-column: 1/4;
+  color: black;
+  justify-self: center;
+  position: relative;
+}
+
 /******************fourth section of grid**********************/
 .boxesGrid {
   display: grid;
@@ -394,6 +402,10 @@ main {
 }
 
 .box {
+  position: relative;
+  width: 14%;
+  height: 390px;
+  justify-content: space-evenly;
   /* width: 241px; */
   /* height: 390px; */
   background-color: #efedea;
@@ -448,13 +460,6 @@ main {
 
 .s3 {
   width: 90%;
-}
-
-.swiper-slide {
-  position: relative;
-  width: 14%;
-  height: 390px;
-  justify-content: space-evenly;
 }
 
 /******************fifth section of grid**********************/
