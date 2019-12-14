@@ -100,20 +100,26 @@
         </li>
       </ul>
       <ul data-list="volunteers" class="list">
-        <li class="volunteer-grid">
-          <p class="profession">student</p>
-          <img src="app-images/flower_83.png" alt="voluntter image" />
-          <h2>Kathrin</h2>
-          <p class="email">kath@gmail.com</p>
-          <ul>
-            <li class="btn-no-back">write</li>
-            <li class="btn-no-back">interviews</li>
-          </ul>
-          <ul>
-            <li class="btn-back">Climate Justice + Energy</li>
-            <li class="btn-back">Transport</li>
-          </ul>
-        </li>
+        <template>
+          <li class="volunteer-grid">
+            <p class="profession" data-field="User Profession Area">student</p>
+            <img
+              src="app-images/flower_83.png"
+              alt="voluntter image"
+              data-field="User image"
+            />
+            <h2 data-field="User Name">Kathrin</h2>
+            <p class="email" data-field="User email">kath@gmail.com</p>
+            <ul>
+              <li class="btn-no-back">write</li>
+              <li class="btn-no-back">interviews</li>
+            </ul>
+            <ul>
+              <li class="btn-back">Climate Justice + Energy</li>
+              <li class="btn-back">Transport</li>
+            </ul>
+          </li>
+        </template>
       </ul>
     </main>
     <nav class="nav-bar">
@@ -248,5 +254,7 @@
         </li>
       </ul>
     </nav>
+    <script src="js/shared.js"></script>
+    <script src="js/search.js"></script>
   </body>
 </html>
