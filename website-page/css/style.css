@@ -114,13 +114,15 @@ main {
   grid-row: 3/4;
   justify-self: center;
   /*****%****/
-  width: 929px;
+  width: 90%;
+  /* justify-content: center; */
   height: 306px;
   border-radius: 10px;
   background: linear-gradient(to bottom, #48a250, #317737);
   display: grid;
   grid-template-rows: auto auto;
-  grid-template-columns: 330px auto;
+  grid-template-columns: 1fr 2fr;
+  margin: auto;
 }
 
 .girl,
@@ -149,11 +151,14 @@ main {
   line-height: 1.6;
 }
 
-.swiper-container {
+.s1 {
   grid-column: 2/3;
   grid-row: 3/4;
-  width: 929px;
-  height: 306px;
+  /* width: 929px;
+  height: 306px; */
+}
+.swiper-container{
+  width: 100%;
 }
 
 /* .swiper-wrapper {
@@ -161,9 +166,9 @@ main {
 } */
 
 .btn1 {
-  position: relative;
+  /* position: relative;
   top: 51%;
-  left: 280%;
+  left: 280%; */
   /* grid-column: 1/2;
   grid-row: 3/4; */
   /* padding-top: 765px;
@@ -172,9 +177,9 @@ main {
 }
 
 .btn2 {
-  position: relative;
+  /* position: relative;
   top: 51%;
-  right: 240%;
+  right: 240%; */
   /* grid-column: 3/4;
   grid-row: 3/4; */
   /* padding-top: 765px;

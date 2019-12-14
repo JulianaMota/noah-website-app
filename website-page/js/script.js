@@ -7,15 +7,15 @@ var swiper = new Swiper(".s1", {
   }
 });
 
-var swiperTwo = new Swiper(".s2", {
-  navigation: {
-    pagination: {
-      el: ".swiper-pagination"
-    },
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  }
-});
+// var swiperTwo = new Swiper(".s2", {
+//   navigation: {
+//     pagination: {
+//       el: ".swiper-pagination"
+//     },
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev"
+//   }
+// });
 
 // Get the modal
 let modal = document.getElementById("mapModalBackground");
@@ -32,6 +32,16 @@ btn.forEach(
   btn =>
     (btn.onclick = function() {
       modal.style.display = "block";
+
+      var swiperTwo = new Swiper(".s2", {
+        pagination: {
+          el: ".swiper-pagination"
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
     })
 );
 
