@@ -64,13 +64,6 @@ main {
   margin: 0 77px;
 }
 
-/* .bar {
-  height: 90px;
-  background-color: #ffffff;
-  display: none;
-} */
-
-.sticky,
 .bar {
   position: sticky;
   position: -webkit-sticky;
@@ -79,6 +72,15 @@ main {
   height: 10%;
   width: 100%;
   background-color: #ffffff;
+}
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  /* height: 10%;
+  width: 100%;
+  background-color: #ffffff; */
 }
 
 .illustration {
@@ -114,13 +116,16 @@ main {
   grid-row: 3/4;
   justify-self: center;
   /*****%****/
-  width: 929px;
+  /* width: 929px; */
+  width: 90%;
   height: 306px;
   border-radius: 10px;
   background: linear-gradient(to bottom, #48a250, #317737);
   display: grid;
   grid-template-rows: auto auto;
-  grid-template-columns: 330px auto;
+  /* grid-template-columns: 330px auto; */
+  grid-template-columns: 1fr 2fr;
+  margin: auto;
 }
 
 .girl,
@@ -149,11 +154,17 @@ main {
   line-height: 1.6;
 }
 
-.swiper-container {
+.s1 {
   grid-column: 2/3;
   grid-row: 3/4;
+}
+
+.swiper-container {
+  width: 100%;
+  /* grid-column: 2/3;
+  grid-row: 3/4;
   width: 929px;
-  height: 306px;
+  height: 306px; */
 }
 
 /* .swiper-wrapper {
@@ -161,18 +172,19 @@ main {
 } */
 
 .btn1 {
-  position: relative;
+  /* position: relative;
   top: 51%;
   left: 280%;
   /* grid-column: 1/2;
   grid-row: 3/4; */
   /* padding-top: 765px;
   padding-left: 140px; */
+
   color: black;
 }
 
 .btn2 {
-  position: relative;
+  /* position: relative;
   top: 51%;
   right: 240%;
   /* grid-column: 3/4;
@@ -352,15 +364,16 @@ main {
   width: 700px;
 }
 
-/* .btn3 {
+.btn3,
+.btn4 {
   color: black;
-} */
+}
 
 /******************fourth section of grid**********************/
-.modalsGrid {
+.boxesGrid {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: 15% 15% auto;
   background-color: #93c7cd;
   width: 100%;
   height: 637px;
@@ -370,27 +383,26 @@ main {
   grid-column: 1/2;
   grid-row: 1/2;
   text-align: center;
-  padding-top: 35px;
+  align-self: center;
+  /* padding-top: 35px; */
 }
 
 .subtitle3 {
   grid-column: 1/2;
   grid-row: 2/3;
   text-align: center;
-  padding-top: 10px;
 }
 
-.modal {
-  display: grid;
-  width: 241px;
-  height: 390px;
+.box {
+  /* width: 241px; */
+  /* height: 390px; */
   background-color: #efedea;
   border-radius: 10px;
+  display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(4, auto);
 }
-
-.iconModal {
+.iconBox {
   grid-row: 1/2;
   width: 99px;
   height: 99px;
@@ -398,14 +410,14 @@ main {
   align-self: center;
 }
 
-.modalTitle {
+.boxTitle {
   grid-row: 2/3;
   text-align: center;
   font-size: 20px;
   font-weight: 700px;
 }
 
-.modalP {
+.boxP {
   grid-row: 3/4;
   text-align: center;
   justify-self: center;
@@ -414,7 +426,7 @@ main {
   font-weight: 300px;
 }
 
-.modalButton {
+.boxButton {
   grid-row: 4/5;
   border: solid #25853a 2px;
   color: #25853a;
@@ -424,7 +436,25 @@ main {
   height: 48px;
   background-color: #efedea;
   justify-self: center;
-  align-self: center;
+  /* align-self: center; */
+}
+
+.btn5 {
+  color: black;
+}
+.btn6 {
+  color: black;
+}
+
+.s3 {
+  width: 90%;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 14%;
+  height: 390px;
+  justify-content: space-evenly;
 }
 
 /******************fifth section of grid**********************/
