@@ -1137,6 +1137,13 @@ textarea:focus {
 /************** Settings page styling *************/
 .profile-settings {
   display: grid;
+  grid-template: auto auto auto auto auto auto auto auto / auto 1fr;
+  column-gap: 20px;
+  row-gap: 5px;
+}
+.profile-settings img {
+  grid-column: 1/2;
+  grid-row: 1/5;
 }
 .profile-settings h2 {
   font-size: var(--font-size-subtitle1);
@@ -1149,6 +1156,45 @@ textarea:focus {
 .profile-settings .set-edit {
   color: var(--color-lightblue);
   font-size: var(--font-size-text1);
+}
+.profile-settings div {
+  grid-column: 1/3;
+  display: flex;
+  padding: 5px;
+}
+.profile-settings h3 {
+  font-size: var(--font-size-subtitle2);
+  color: var(--color-lightblue);
+  font-weight: bold;
+}
+.profile-settings button {
+  background-color: transparent;
+  border: none;
+}
+.profile-settings button svg {
+  width: 15px;
+}
+.profile-settings ul {
+  display: flex;
+  grid-column: 1/3;
+}
+.profile-settings li {
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+.extra-settings {
+  margin-top: 50px;
+}
+.extra-settings hr {
+  border-top: 1.5px solid var(--color-green);
+}
+.extra-settings a {
+  color: var(--color-lightblue);
+  display: grid;
+  grid-template: 1fr / 1fr auto;
+}
+.extra-settings a img {
+  transform: rotate(-90deg);
 }
 
 /****************Desktop****************/
