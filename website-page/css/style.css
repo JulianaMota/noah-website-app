@@ -31,7 +31,7 @@ nav {
 main {
   display: grid;
   grid-template-columns: 650px auto;
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: 200px 200px 200px;
   column-gap: 78px;
 }
 
@@ -52,6 +52,8 @@ main {
 }
 
 .active {
+  grid-row: 3/4;
+  grid-column: 1/2;
   width: 255px;
   height: 66px;
   background-color: #48a250;
@@ -64,7 +66,7 @@ main {
   margin: 0 77px;
 }
 
-.bar {
+/* .bar {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
@@ -72,7 +74,7 @@ main {
   height: 10%;
   width: 100%;
   background-color: #ffffff;
-}
+}*/
 .sticky {
   position: sticky;
   position: -webkit-sticky;
@@ -192,6 +194,12 @@ main {
   /* padding-top: 765px;
   padding-right: 140px; */
   color: black;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 /******************tird section of grid**********************/
@@ -387,11 +395,6 @@ main {
 .modal-content-box .swiper-button-next:after,
 .modal-content-box .swiper-button-prev:after {
   font-size: 25px;
-  font-weight: bold;
-}
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 30px;
   font-weight: bold;
 }
 
