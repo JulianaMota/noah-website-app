@@ -22,21 +22,25 @@
         src="app-images/tasks-illustration.png"
         alt="illustration"
       />
-      <button>
-        <img src="app-images/interrogation-icon_58.png" alt="question marc" />
+      <button data-question="tasks">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z"
+          />
+        </svg>
       </button>
     </header>
     <main class="app-main">
       <section class="tasks-filters">
-        <button class="btn-back">
+        <button class="btn-back" data-btn="tasks">
           <img src="app-images/list-white_16.png" alt="icon tasks" />
           <p>Tasks</p>
         </button>
-        <button class="btn-back">
+        <button class="btn-back" data-btn="activities">
           <img src="app-images/calendar-white_16.png" alt="icon activities" />
           <p>Activities</p>
         </button>
-        <button class="btn-back">
+        <button class="btn-back" data-btn="ideas">
           <img src="app-images/pencil_16.png" alt="icon ideas" />
           <p>Ideas</p>
         </button>
@@ -84,7 +88,7 @@
           </li>
         </template>
       </ul>
-      <ul data-list="activities" class="list">
+      <ul data-list="activities" class="list list-activ">
         <template data-template="activities">
           <li class="task-grid">
             <h2 class="tasks-title" data-activ="Title">
@@ -138,13 +142,12 @@
           </li>
         </template>
       </ul>
-      <ul data-list="ideas" class="list">
+      <ul data-list="ideas" class="list list-ideas">
         <template data-template="ideas">
           <li class="task-grid">
-            <h2 class="tasks-title">
+            <h2 class="tasks-title" data-idea="Idea">
               Undersigned for Sustainable Energy in all Denmark
             </h2>
-
             <button class="favorites-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -171,17 +174,40 @@
               </svg>
             </button>
             <div class="ideas-user">
-              <img src="app-images/turtle_26px.png" alt="user img" />
-              <p>Aaron</p>
+              <img
+                src="app-images/turtle_26px.png"
+                alt="user img"
+                data-idea="ProfileImage"
+              />
+              <p data-idea="VolunteerName">Aaron</p>
             </div>
-            <p class="tasks-contact ideas-contact">amorthen@gmail.com</p>
-            <p class="ideas-votes"><span>10</span> votes</p>
+            <p class="tasks-contact ideas-contact" data-idea="Contact">
+              amorthen@gmail.com
+            </p>
+            <p class="ideas-votes"><span>0</span> votes</p>
             <button class="tasks-btn btn-back">Vote to Project</button>
           </li>
         </template>
       </ul>
-      <a href="idea.html" class="add-idea-btn"><i class="fas fa-plus"></i></a>
+      <a href="idea.html" class="add-idea-btn" data-btnAdd="add"
+        ><i class="fas fa-plus"></i
+      ></a>
     </main>
+
+    <section class="modal-info">
+      <div>
+        <button data-modal="x">
+          <img src="app-images/x-blue_15.png" alt="x" />
+        </button>
+        <img src="app-images/interrogation-blue.png" alt="interrogation icon" />
+        <p>
+          Here you can apply to a task given by Noah members. After that, you
+          will receive an email with more details of the work. By clicking in
+          the heart you can save in favorites
+        </p>
+      </div>
+    </section>
+
     <nav class="nav-bar">
       <ul class="nav-grid">
         <li>

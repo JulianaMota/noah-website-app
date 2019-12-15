@@ -22,7 +22,7 @@ function get() {
     .then(e => {
       // console.log(e);
       volunteerArr = e;
-      console.log(volunteerArr);
+      // console.log(volunteerArr);
       volunteerArr.forEach(displayVolunteers);
     });
 }
@@ -47,9 +47,9 @@ function displayVolunteers(volunteer) {
       element.dataset.field === "UserSkills" ||
       element.dataset.field === "UserGroup"
     ) {
-      element.children[0].textContent = volunteer[property][0];
-      element.children[1].textContent = volunteer[property][1];
-      console.log(element.children);
+      volunteer[property].forEach((name, i) => {
+        element.children[i].textContent = name;
+      });
     } else {
       element.textContent = volunteer[property];
     }

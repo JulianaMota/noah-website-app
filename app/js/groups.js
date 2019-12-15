@@ -91,18 +91,18 @@ function openModalCph() {
   groupModal.style.display = "block";
 
   title.textContent = "Copenhagen";
+  favoriteClick();
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
     slidesPerView: 1.3
   });
-
-  
 }
 
 function openModalAlb() {
   groupModal.style.display = "block";
   title.textContent = "Alborg";
+  favoriteClick();
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
@@ -113,6 +113,7 @@ function openModalAlb() {
 function openModalOde() {
   groupModal.style.display = "block";
   title.textContent = "Odense";
+  favoriteClick();
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
@@ -123,6 +124,7 @@ function openModalOde() {
 function openModalAah() {
   groupModal.style.display = "block";
   title.textContent = "Aahrus";
+  favoriteClick();
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
