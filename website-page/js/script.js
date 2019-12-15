@@ -64,11 +64,11 @@ window.onclick = function(event) {
 var swiperBox = new Swiper(".s3", {
   slidesPerView: 4,
   spaceBetween: 30,
-  slidesPerGroup: 4,
+  slidesPerGroup: 1,
   /* loop: true,
   loopFillGroupWithBlank: true, */
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    nextEl: ".swiper-button-next-unique",
+    prevEl: ".swiper-button-prev-unique"
   }
 });
