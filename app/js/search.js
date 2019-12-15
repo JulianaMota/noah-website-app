@@ -32,15 +32,24 @@ function displayVolunteers(volunteer) {
   // console.log(clone);
 
   const dataFields = clone.querySelectorAll("[data-field]");
-  console.log(volunteer);
+  // console.log(volunteer);
 
   dataFields.forEach(element => {
     const property = element.dataset.field;
-    if (element.dataset.field === "User Image") {
+    // console.log(element.dataset.field === "User skills");
+
+    if (element.dataset.field === "User-image") {
       element.src =
-        "url(https://anime-8835.restdb.io/media/" +
+        "https://anime-8835.restdb.io/media/" +
         volunteer[property] +
-        "?key=5c7ef096cac6621685acbbb6)";
+        "?key=5c7ef096cac6621685acbbb6";
+    } else if (
+      element.dataset.field === "UserSkills" ||
+      element.dataset.field === "UserGroup"
+    ) {
+      element.children[0].textContent = volunteer[property][0];
+      element.children[1].textContent = volunteer[property][1];
+      console.log(element.children);
     } else {
       element.textContent = volunteer[property];
     }

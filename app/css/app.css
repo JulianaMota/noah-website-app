@@ -159,7 +159,11 @@ body {
 }
 a {
   text-decoration: none;
+  /* cursor: pointer; */
 }
+/* button {
+  cursor: pointer;
+} */
 input,
 button {
   outline: none;
@@ -807,7 +811,7 @@ fieldset {
   grid-column: 1/2;
   grid-row: 3/4;
 }
-.task-skill li {
+.task-skill {
   padding: 7px 30px;
   font-size: var(--font-size-notes1);
   background-color: var(--color-lightblue);
@@ -840,17 +844,20 @@ fieldset {
   grid-column: 1/2;
   grid-row: 2/3;
   display: flex;
+  font-weight: bold;
 }
 .activ-place {
   grid-column: 1/2;
   grid-row: 3/4;
   display: flex;
+  font-weight: bold;
 }
 .activ-place a,
 .activ-date p {
   padding-left: 5px;
   color: var(--color-green);
   font-size: var(--font-size-text1);
+  align-self: center;
 }
 
 /****************one idea styling ****************/

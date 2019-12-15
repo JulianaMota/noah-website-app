@@ -42,126 +42,143 @@
         </button>
       </section>
       <ul data-list="tasks" class="list">
-        <li class="task-grid">
-          <h2 class="tasks-title">Article about Deforestation</h2>
-          <button class="favorites-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="20.063"
-              viewBox="0 0 22 20.063"
-            >
-              <g transform="translate(1 0)">
-                <path
-                  class="stroke-color"
-                  d="M18.426,1.624a5.374,5.374,0,0,0-7.649,0l-.752.752-.752-.752A5.409,5.409,0,0,0,1.624,9.273l8.4,8.4,8.4-8.4a5.374,5.374,0,0,0,0-7.649"
-                  transform="translate(-0.025 0.975)"
-                  fill="none"
-                  stroke-width="2"
-                  fill-rule="evenodd"
-                />
-                <rect
-                  width="20"
-                  height="20"
-                  transform="translate(0)"
-                  fill="none"
-                />
-              </g>
-            </svg>
-          </button>
-          <p class="tasks-text">
-            Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at
-            placerat tincidunt.
-          </p>
-          <ul class="task-skill">
-            <li class="btn-back">Writing</li>
-          </ul>
-          <p class="tasks-contact">contact: <span>kathc@gmail.com</span></p>
-          <button class="tasks-btn btn-back">Apply</button>
-        </li>
+        <template data-template="tasks">
+          <li class="task-grid">
+            <h2 class="tasks-title" data-task="Title">
+              Article about Deforestation
+            </h2>
+            <button class="favorites-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="20.063"
+                viewBox="0 0 22 20.063"
+              >
+                <g transform="translate(1 0)">
+                  <path
+                    class="stroke-color"
+                    d="M18.426,1.624a5.374,5.374,0,0,0-7.649,0l-.752.752-.752-.752A5.409,5.409,0,0,0,1.624,9.273l8.4,8.4,8.4-8.4a5.374,5.374,0,0,0,0-7.649"
+                    transform="translate(-0.025 0.975)"
+                    fill="none"
+                    stroke-width="2"
+                    fill-rule="evenodd"
+                  />
+                  <rect
+                    width="20"
+                    height="20"
+                    transform="translate(0)"
+                    fill="none"
+                  />
+                </g>
+              </svg>
+            </button>
+            <p class="tasks-text" data-task="Text">
+              Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at
+              placerat tincidunt.
+            </p>
+            <p data-task="Skill" class="btn-back task-skill">Writing</p>
+            <p class="tasks-contact">
+              contact: <span data-task="Contact">kathc@gmail.com</span>
+            </p>
+            <button class="tasks-btn btn-back">Apply</button>
+          </li>
+        </template>
       </ul>
       <ul data-list="activities" class="list">
-        <li class="task-grid">
-          <h2 class="tasks-title">Clean waste Amager Beach</h2>
-          <button class="favorites-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="20.063"
-              viewBox="0 0 22 20.063"
-            >
-              <g transform="translate(1 0)">
-                <path
-                  class="stroke-color"
-                  d="M18.426,1.624a5.374,5.374,0,0,0-7.649,0l-.752.752-.752-.752A5.409,5.409,0,0,0,1.624,9.273l8.4,8.4,8.4-8.4a5.374,5.374,0,0,0,0-7.649"
-                  transform="translate(-0.025 0.975)"
-                  fill="none"
-                  stroke-width="2"
-                  fill-rule="evenodd"
-                />
-                <rect
-                  width="20"
-                  height="20"
-                  transform="translate(0)"
-                  fill="none"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="activ-date">
-            <img src="app-images/calendar-green_16.png" alt="calendar icon" />
-            <p>
-              <span>25.01.20</span> <span>09:00</span> to <span>12:00</span>
+        <template data-template="activities">
+          <li class="task-grid">
+            <h2 class="tasks-title" data-activ="Title">
+              Clean waste Amager Beach
+            </h2>
+            <button class="favorites-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="20.063"
+                viewBox="0 0 22 20.063"
+              >
+                <g transform="translate(1 0)">
+                  <path
+                    class="stroke-color"
+                    d="M18.426,1.624a5.374,5.374,0,0,0-7.649,0l-.752.752-.752-.752A5.409,5.409,0,0,0,1.624,9.273l8.4,8.4,8.4-8.4a5.374,5.374,0,0,0,0-7.649"
+                    transform="translate(-0.025 0.975)"
+                    fill="none"
+                    stroke-width="2"
+                    fill-rule="evenodd"
+                  />
+                  <rect
+                    width="20"
+                    height="20"
+                    transform="translate(0)"
+                    fill="none"
+                  />
+                </g>
+              </svg>
+            </button>
+            <div class="activ-date">
+              <img src="app-images/calendar-green_16.png" alt="calendar icon" />
+              <p>
+                <span data-activ="Day">25.01.20</span>
+                <span data-activ="HourStart">09:00</span> to
+                <span data-activ="HourEnd">12:00</span>
+              </p>
+            </div>
+            <div class="activ-place">
+              <img src="app-images/places_16.png" alt="place icon" /><a
+                data-activ="Place"
+                href=""
+                target="_blank"
+                ><span data-activ="PlaceName">Strandevej 10</span></a
+              >
+            </div>
+            <p class="tasks-contact">
+              contact: <span data-activ="Contact">kathc@gmail.com</span>
             </p>
-          </div>
-          <div class="activ-place">
-            <img src="app-images/places_16.png" alt="place icon" /><a href=""
-              >Strandevej 10</a
-            >
-          </div>
-          <p class="tasks-contact">contact: <span>kathc@gmail.com</span></p>
-          <button class="tasks-btn btn-back">Join</button>
-        </li>
+            <button class="tasks-btn btn-back">Join</button>
+          </li>
+        </template>
       </ul>
       <ul data-list="ideas" class="list">
-        <li class="task-grid">
-          <h2 class="tasks-title">
-            Undersigned for Sustainable Energy in all Denmark
-          </h2>
+        <template data-template="ideas">
+          <li class="task-grid">
+            <h2 class="tasks-title">
+              Undersigned for Sustainable Energy in all Denmark
+            </h2>
 
-          <button class="favorites-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="20.063"
-              viewBox="0 0 22 20.063"
-            >
-              <g transform="translate(1 0)">
-                <path
-                  class="stroke-color"
-                  d="M18.426,1.624a5.374,5.374,0,0,0-7.649,0l-.752.752-.752-.752A5.409,5.409,0,0,0,1.624,9.273l8.4,8.4,8.4-8.4a5.374,5.374,0,0,0,0-7.649"
-                  transform="translate(-0.025 0.975)"
-                  fill="none"
-                  stroke-width="2"
-                  fill-rule="evenodd"
-                />
-                <rect
-                  width="20"
-                  height="20"
-                  transform="translate(0)"
-                  fill="none"
-                />
-              </g>
-            </svg>
-          </button>
-          <div class="ideas-user">
-            <img src="app-images/turtle_26px.png" alt="user img" />
-            <p>Aaron</p>
-          </div>
-          <p class="tasks-contact ideas-contact">amorthen@gmail.com</p>
-          <p class="ideas-votes"><span>10</span> votes</p>
-          <button class="tasks-btn btn-back">Vote to Project</button>
-        </li>
+            <button class="favorites-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="20.063"
+                viewBox="0 0 22 20.063"
+              >
+                <g transform="translate(1 0)">
+                  <path
+                    class="stroke-color"
+                    d="M18.426,1.624a5.374,5.374,0,0,0-7.649,0l-.752.752-.752-.752A5.409,5.409,0,0,0,1.624,9.273l8.4,8.4,8.4-8.4a5.374,5.374,0,0,0,0-7.649"
+                    transform="translate(-0.025 0.975)"
+                    fill="none"
+                    stroke-width="2"
+                    fill-rule="evenodd"
+                  />
+                  <rect
+                    width="20"
+                    height="20"
+                    transform="translate(0)"
+                    fill="none"
+                  />
+                </g>
+              </svg>
+            </button>
+            <div class="ideas-user">
+              <img src="app-images/turtle_26px.png" alt="user img" />
+              <p>Aaron</p>
+            </div>
+            <p class="tasks-contact ideas-contact">amorthen@gmail.com</p>
+            <p class="ideas-votes"><span>10</span> votes</p>
+            <button class="tasks-btn btn-back">Vote to Project</button>
+          </li>
+        </template>
       </ul>
       <a href="idea.html" class="add-idea-btn"><i class="fas fa-plus"></i></a>
     </main>
@@ -297,5 +314,7 @@
         </li>
       </ul>
     </nav>
+    <script src="js/shared.js"></script>
+    <script src="js/tasks.js"></script>
   </body>
 </html>
