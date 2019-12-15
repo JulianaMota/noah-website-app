@@ -24,7 +24,7 @@ p {
   font-weight: 300;
 }
 
-nav {
+.desktop-nav {
   width: 100%;
 }
 
@@ -66,23 +66,11 @@ main {
   margin: 0 77px;
 }
 
-/* .bar {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-  z-index: 100;
-  height: 10%;
-  width: 100%;
-  background-color: #ffffff;
-}*/
 .sticky {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 100;
-  /* height: 10%;
-  width: 100%;
-  background-color: #ffffff; */
 }
 
 .illustration {
@@ -634,4 +622,318 @@ main {
   font-size: 16px;
   font-weight: 300;
   width: 428px;
+}
+
+/*************MOBILE VERSION**********/
+
+@media all and (max-width: 700px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-header {
+    background-image: url("../images/mobile-header.png");
+    width: 375px;
+    height: 126px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 150px;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .illustration {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 305px;
+    width: 314px;
+    align-self: center;
+    justify-self: end;
+    left: 1%;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .h1 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    justify-self: center;
+    width: 300px;
+    padding-top: 16px;
+  }
+
+  .active {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .sticky {
+    display: none;
+  }
+
+  .mobile-second-nav {
+    background-image: url("../images/mobile-second-nav@3x.png");
+    height: 86px;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .second-sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  /*********************************************/
+
+  .volunteers {
+    grid-template-rows: 50px 70px auto;
+    grid-template-columns: auto;
+    padding: 15px;
+  }
+
+  .title {
+    padding: 18px 0;
+  }
+
+  .container {
+    height: 384px;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+  }
+
+  .girl,
+  .boy {
+    width: 187px;
+    height: 165px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: relative;
+    left: 8%;
+  }
+
+  .name {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+    padding-top: 1px;
+  }
+
+  .introduction {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 200px;
+    justify-self: center;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 16px;
+  }
+
+  .s1 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: none;
+  }
+
+  /**************************************/
+
+  .mapGrid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    padding-top: 30px;
+  }
+
+  .blueGrid {
+    grid-column: 1/2;
+    width: 375px;
+    height: 190px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-column-gap: 25px;
+  }
+  .membersIcon {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .hundred {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .volunteersIcon {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .sevenHundred {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .title2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+    padding-top: 35px;
+  }
+
+  .subtitle2 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 16px;
+  }
+
+  .map {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    padding-top: 50px;
+    width: 100%;
+    position: relative;
+  }
+
+  .five {
+    width: 39px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-38%, -50%);
+  }
+
+  .ten {
+    width: 39px;
+    position: absolute;
+    top: 30%;
+    left: 49%;
+    /* transform: translate(-30%, -49%); */
+  }
+
+  .one {
+    width: 39px;
+    position: absolute;
+    top: 57%;
+    left: 45.5%;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  /* The Modal (background) */
+  .map-modal-background {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 800px;
+    /* overflow: auto; */
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Modal Content/Box */
+  .modal-content-box {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px black;
+    width: 857px;
+    height: 381px;
+  }
+  /* The Close Button */
+  .close {
+    float: right;
+    height: 18px;
+    width: 18px;
+  }
+
+  .close:hover,
+  .one:hover,
+  .five:hover,
+  .ten:hover {
+    cursor: pointer;
+  }
+
+  .modal-content-grid {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 30px, auto, 30px;
+    grid-row-gap: 15px;
+    /* width: 734px; */
+  }
+
+  .modal-content-title {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .modal-content-img {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: 700px;
+  }
+
+  .modal-content-text {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    width: 700px;
+  }
+
+  .btn3,
+  .btn4 {
+    color: black;
+  }
+
+  .swiper-pagination {
+    grid-row: 4/5;
+    grid-column: 1/4;
+    color: black;
+    justify-self: center;
+    position: relative;
+  }
+  .swiper-pagination-bullet {
+    background-color: #333333;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #25853a;
+  }
+
+  .modal-content-box .swiper-button-next:after,
+  .modal-content-box .swiper-button-prev:after {
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
