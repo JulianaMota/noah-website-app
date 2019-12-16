@@ -72,3 +72,11 @@ var swiperBox = new Swiper(".s3", {
     prevEl: ".swiper-button-prev-unique"
   }
 });
+
+var swiperBoxMobile = new Swiper(".s4", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  slidesPerGroup: 1
+  /* loop: true,
+    loopFillGroupWithBlank: true, */
+});
