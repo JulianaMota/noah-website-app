@@ -65,18 +65,32 @@ var swiperBox = new Swiper(".s3", {
   slidesPerView: 4,
   spaceBetween: 30,
   slidesPerGroup: 1,
-  /* loop: true,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 40
+    },
+    1000: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    },
+    /* loop: true,
   loopFillGroupWithBlank: true, */
-  navigation: {
-    nextEl: ".swiper-button-next-unique",
-    prevEl: ".swiper-button-prev-unique"
+    navigation: {
+      nextEl: ".swiper-button-next-unique",
+      prevEl: ".swiper-button-prev-unique"
+    }
   }
-});
-
-var swiperBoxMobile = new Swiper(".s4", {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  slidesPerGroup: 1
-  /* loop: true,
-    loopFillGroupWithBlank: true, */
 });
