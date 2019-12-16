@@ -43,7 +43,7 @@ function displayVolunteers(volunteer) {
 
     if (element.dataset.field === "UserImage") {
       if (volunteer[property] === undefined) {
-        element.src = "../app-images/flower_83.png";
+        element.src = "./app-images/flower_83.png";
       } else {
         element.src =
           "https://anime-8835.restdb.io/media/" +

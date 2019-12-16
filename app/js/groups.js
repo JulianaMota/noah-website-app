@@ -90,12 +90,12 @@ function openModalCph(event) {
 
   const currentBtn = event.target.dataset.btn;
 
-  function filterCopenhagen(group) {
+  function fiterSildes(group) {
     console.log(group);
     return group.City === currentBtn;
   }
 
-  filterArr = groupsArr.filter(filterCopenhagen);
+  filterArr = groupsArr.filter(fiterSildes);
   displayGroups(filterArr);
   console.log(filterArr);
 
@@ -112,11 +112,11 @@ function openModalAlb() {
 
   const currentBtn = event.target.dataset.btn;
   console.log(currentBtn);
-  function filterCopenhagen(group) {
+  function filterSlides(group) {
     // console.log(group);
     return group.City === currentBtn;
   }
-  filterArr = groupsArr.filter(filterCopenhagen);
+  filterArr = groupsArr.filter(filterSlides);
   displayGroups(filterArr);
   console.log(filterArr);
 
@@ -133,11 +133,11 @@ function openModalOde() {
 
   const currentBtn = event.target.dataset.btn;
   console.log(currentBtn);
-  function filterCopenhagen(group) {
+  function filterSlides(group) {
     console.log(group);
     return group.City === currentBtn;
   }
-  filterArr = groupsArr.filter(filterCopenhagen);
+  filterArr = groupsArr.filter(filterSlides);
   displayGroups(filterArr);
   console.log(filterArr);
 
@@ -154,11 +154,11 @@ function openModalAah() {
 
   const currentBtn = event.target.dataset.btn;
   console.log(currentBtn);
-  function filterCopenhagen(group) {
+  function filterSlides(group) {
     console.log(group);
     return group.City === currentBtn;
   }
-  filterArr = groupsArr.filter(filterCopenhagen);
+  filterArr = groupsArr.filter(filterSlides);
   displayGroups(filterArr);
   console.log(filterArr);
 
