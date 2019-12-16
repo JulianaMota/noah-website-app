@@ -36,20 +36,31 @@ function displayVolunteers(volunteer) {
 
   dataFields.forEach(element => {
     const property = element.dataset.field;
-    // console.log(element.dataset.field === "User skills");
+    if (volunteer[property] === undefined) {
+      console.log(element);
+      element.style.display = "none";
+    }
 
-    if (element.dataset.field === "User-image") {
-      element.src =
-        "https://anime-8835.restdb.io/media/" +
-        volunteer[property] +
-        "?key=5c7ef096cac6621685acbbb6";
+    if (element.dataset.field === "UserImage") {
+      if (volunteer[property] === undefined) {
+        element.src = "../app-images/flower_83.png";
+      } else {
+        element.src =
+          "https://anime-8835.restdb.io/media/" +
+          volunteer[property] +
+          "?key=5c7ef096cac6621685acbbb6";
+      }
     } else if (
       element.dataset.field === "UserSkills" ||
       element.dataset.field === "UserGroup"
     ) {
-      volunteer[property].forEach((name, i) => {
-        element.children[i].textContent = name;
-      });
+      if (volunteer[property] === undefined) {
+        element.textContent = "none";
+      } else {
+        volunteer[property].forEach((name, i) => {
+          element.children[i].textContent = name;
+        });
+      }
     } else {
       element.textContent = volunteer[property];
     }

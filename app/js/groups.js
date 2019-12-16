@@ -3,6 +3,7 @@
 const groupModal = document.querySelector(".group-modal");
 
 let groupsArr;
+let filterArr = [];
 
 const title = document.querySelector(".group-modal h2");
 
@@ -26,7 +27,7 @@ function init() {
 }
 
 function get() {
-  console.log(baseLink + "noah-groups");
+  // console.log(baseLink + "noah-groups");
   fetch(baseLink + "noah-groups", {
     method: "get",
     headers: {
@@ -40,58 +41,63 @@ function get() {
       // console.log(e);
       groupsArr = e;
       // console.log(groupsArr);
-      groupsArr.forEach(displayGroups);
+      // groupsArr.forEach(displayGroups);
+      displayGroups(groupsArr);
     });
 }
 
-function displayGroups(group) {
-  // console.log(group);
+function displayGroups(groupsArr) {
+  document.querySelector("[data-list=groups]").innerHTML = "";
+  groupsArr.forEach(group => {
+    const clone = document.querySelector("template").content.cloneNode(true);
+    // console.log(clone);
 
-  const clone = document.querySelector("template").content.cloneNode(true);
-  // console.log(clone);
+    const dataFields = clone.querySelectorAll("[data-field]");
+    // console.log(group);
 
-  const dataFields = clone.querySelectorAll("[data-field]");
-  console.log(group);
+    clone.querySelector(".one-slide").dataset.city = group.City;
 
-  clone.querySelector(".one-slide").dataset.city = group.City;
-
-  dataFields.forEach(element => {
-    const property = element.dataset.field;
-    if (element.dataset.field === "Team") {
-      element.innerHTML = group[property];
-      const ul = element.children[0];
-      ul.classList.add("group-team");
-    } else if (element.dataset.field === "Image") {
-      element.style.backgroundImage =
-        "url(https://anime-8835.restdb.io/media/" +
-        group[property] +
-        "?key=5c7ef096cac6621685acbbb6)";
-    } else {
-      element.textContent = group[property];
-    }
+    dataFields.forEach(element => {
+      const property = element.dataset.field;
+      if (element.dataset.field === "Team") {
+        element.innerHTML = group[property];
+        const ul = element.children[0];
+        ul.classList.add("group-team");
+      } else if (element.dataset.field === "Image") {
+        element.style.backgroundImage =
+          "url(https://anime-8835.restdb.io/media/" +
+          group[property] +
+          "?key=5c7ef096cac6621685acbbb6)";
+      } else {
+        element.textContent = group[property];
+      }
+    });
+    document.querySelector("[data-list=groups]").appendChild(clone);
   });
-  document.querySelector("[data-list=groups]").appendChild(clone);
 }
 
-// function hideSlides() {
-//   const databtn = document.querySelectorAll("[data-btn]");
-//   databtn.forEach(btn => {
-//     console.log(dataset.city === "Copenhagen");
-//     console.log(btn.dataset.btn);
-
-//     // if(btn.dataset.btn === ")
-//   });
-// }
-
-function closeGroupModal() {
+function closeGroupModal(t) {
+  // document.querySelector("[data-list=groups]").innerHTML = "";
   groupModal.style.display = "none";
 }
 
-function openModalCph() {
+function openModalCph(event) {
+  filterArr = [];
   groupModal.style.display = "block";
 
   title.textContent = "Copenhagen";
   favoriteClick();
+
+  const currentBtn = event.target.dataset.btn;
+
+  function filterCopenhagen(group) {
+    console.log(group);
+    return group.City === currentBtn;
+  }
+
+  filterArr = groupsArr.filter(filterCopenhagen);
+  displayGroups(filterArr);
+  console.log(filterArr);
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
@@ -104,6 +110,16 @@ function openModalAlb() {
   title.textContent = "Alborg";
   favoriteClick();
 
+  const currentBtn = event.target.dataset.btn;
+  console.log(currentBtn);
+  function filterCopenhagen(group) {
+    // console.log(group);
+    return group.City === currentBtn;
+  }
+  filterArr = groupsArr.filter(filterCopenhagen);
+  displayGroups(filterArr);
+  console.log(filterArr);
+
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
     slidesPerView: 1.3
@@ -115,6 +131,16 @@ function openModalOde() {
   title.textContent = "Odense";
   favoriteClick();
 
+  const currentBtn = event.target.dataset.btn;
+  console.log(currentBtn);
+  function filterCopenhagen(group) {
+    console.log(group);
+    return group.City === currentBtn;
+  }
+  filterArr = groupsArr.filter(filterCopenhagen);
+  displayGroups(filterArr);
+  console.log(filterArr);
+
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
     slidesPerView: 1.3
@@ -125,6 +151,16 @@ function openModalAah() {
   groupModal.style.display = "block";
   title.textContent = "Aahrus";
   favoriteClick();
+
+  const currentBtn = event.target.dataset.btn;
+  console.log(currentBtn);
+  function filterCopenhagen(group) {
+    console.log(group);
+    return group.City === currentBtn;
+  }
+  filterArr = groupsArr.filter(filterCopenhagen);
+  displayGroups(filterArr);
+  console.log(filterArr);
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,

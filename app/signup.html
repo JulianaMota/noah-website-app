@@ -77,17 +77,17 @@
           <label for="email" class="form-field">
             <img src="app-images/mail_36x28.png" alt="email icon" />
             <p>Email</p>
-            <input name="email" id="email" type="email" />
+            <input name="email" id="email" type="email" placeholder="x@x.xx" required/>
           </label>
           <label for="pass" class="form-field">
-            <img src="app-images/lock_36x28.png" alt="pass icon" />
+            <img src="app-images/lock_36x28.png" alt="pass icon"/>
             <p>Password</p>
-            <input name="pass" id="pass" type="password" />
+            <input name="pass" id="pass" type="password" placeholder="xxxxxxxx"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
           </label>
           <label for="repeat-pass" class="form-field">
-            <img src="app-images/lock_36x28.png" alt="pass icon" />
+            <img src="app-images/lock_36x28.png" alt="pass icon"/>
             <p>Password</p>
-            <input name="repeat-pass" id="repeat-pass" type="password" />
+            <input name="repeat-pass" id="repeatPass" type="password" placeholder="xxxxxxxx"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
           </label>
           <a href="signin.html">Already have an account. <span>Sign in</span></a>
           <button class="signup-arrow" data-btn="arrow">
@@ -106,29 +106,29 @@
                 <input class="user-image" type="radio" name='user-image' id="turtle"/><label for="turtle"></label> 
             </div>
           </div>
-          <label for="first-name" class="form-field">
+          <label for="firstName" class="form-field">
             <img src="app-images/profile_32.png" alt="user icon" />
             <p>First Name
             </p>
-            <input name="first-name" id="first-name" type="text" placeholder="xxxx"/>
+            <input name="firstName" id="firstName" type="text" placeholder="xxxx" required/>
           </label>
-          <label for="last-name" class="form-field">
+          <label for="lastName" class="form-field">
             <img src="app-images/profile_32.png" alt="user icon"/>
             <p>Last Name
             </p>
-            <input name="last-nam" id="last-name" type="text" placeholder="xxxx"/>
+            <input name="lastName" id="lastName" type="text" placeholder="xxxx"  required/>
           </label>
-          <label for="post-num" class="form-field">
+          <label for="postNum" class="form-field">
             <img src="app-images/house_32.png" alt="user icon" />
             <p>Post Number
             </p>
-            <input name="post-num" id="post-num" type="text" placeholder="xxxx"/>
+            <input name="postNum" id="postNum" type="text" placeholder="xxxx"  required/>
           </label>
-          <label for="phone-num" class="form-field">
+          <label for="phoneNum" class="form-field">
             <img src="app-images/bag_32.png" alt="user icon" />
             <p>Phone Number
             </p>
-            <input name="post-num" id="phone-num" type="number" placeholder="xxxxxxxx"/>
+            <input name="post-num" id="phoneNum" type="number" placeholder="xxxxxxxx" required />
           </label>
           <label for="profession" class="form-field">
             <img src="app-images/lock_36x28.png" alt="user icon" />
@@ -269,7 +269,8 @@
           
             </fieldset>
           </fieldset>
-          <input id="submit" type="image" src="app-images/arrow-signup_38.png" alt="Submit">
+          <!-- <input id="submit" type="image" src="app-images/arrow-signup_38.png" alt="Submit"  required> -->
+          <input class="btn-back submit" type="submit" value="submit" id="submit">
         </section>
       </form>
     </main>

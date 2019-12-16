@@ -181,6 +181,7 @@ input[type="image"]:focus {
 }
 button:focus {
   background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
 }
 .btn-back {
   background-color: var(--color-green);
@@ -320,8 +321,10 @@ button:focus {
 }
 .sign-main form .submit {
   justify-self: center;
+  color: var(--color-white);
+  font-size: var(--font-size-text2);
+  font-weight: 500;
 }
-
 .sign-main section svg {
   padding-top: 15px;
 }
@@ -632,10 +635,12 @@ fieldset {
   top: 50%;
   outline: none;
   z-index: 4;
+  transition: 1s;
 }
 .app-header button svg {
   width: 35px;
   fill: var(--color-green);
+  transition: 1s;
 }
 
 /****************App Nav****************/
@@ -727,6 +732,7 @@ fieldset {
   -webkit-appearance: none;
   -moz-appearance: none;
   font-size: var(--font-size-text1);
+  transition: 1s;
 }
 .search-filters select:focus {
   background-color: var(--color-yellow);
@@ -805,6 +811,7 @@ fieldset {
   width: 100%;
   padding: 7px 0;
   justify-content: center;
+  transition: 1s;
 }
 .tasks-filters button p {
   padding-left: 5px;
@@ -832,6 +839,7 @@ fieldset {
   background-color: transparent;
   border: none;
   justify-self: right;
+  transition: 1s;
 }
 .favorites-button:focus {
   background-color: transparent;
@@ -1007,6 +1015,10 @@ textarea:focus {
   justify-content: center;
   transition: 2s;
 }
+#groups-body main button:focus {
+  background-color: var(--color-yellow);
+}
+
 #groups-body main .btn-cph {
   top: 55%;
   left: 75%;
@@ -1164,6 +1176,7 @@ textarea:focus {
 }
 .favorites-filters button {
   padding: 10px 13px;
+  transition: 1s;
 }
 /******** favorites list **************/
 .favorites-list {
@@ -1173,6 +1186,7 @@ textarea:focus {
 }
 .favorites-list svg path {
   fill: var(--color-green);
+  transition: 1s;
 }
 
 /************** Settings page styling *************/
@@ -1274,6 +1288,9 @@ textarea:focus {
 
 /****************Desktop****************/
 @media (min-width: 641px) {
+  * {
+    display: none;
+  }
   body {
     /* background-color: black; */
     /* padding: 0 10%; */
