@@ -65,6 +65,10 @@ var swiperBox = new Swiper(".s3", {
   slidesPerView: 4,
   spaceBetween: 30,
   slidesPerGroup: 1,
+  navigation: {
+    nextEl: ".swiper-button-next-unique",
+    prevEl: ".swiper-button-prev-unique"
+  },
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
@@ -85,12 +89,8 @@ var swiperBox = new Swiper(".s3", {
     1000: {
       slidesPerView: 4,
       spaceBetween: 40
-    },
+    }
     /* loop: true,
   loopFillGroupWithBlank: true, */
-    navigation: {
-      nextEl: ".swiper-button-next-unique",
-      prevEl: ".swiper-button-prev-unique"
-    }
   }
 });
