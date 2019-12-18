@@ -306,7 +306,7 @@ main {
 
 .modal-content-grid {
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto 20px;
   grid-template-columns: 30px, auto, 30px;
   grid-row-gap: 15px;
   /* width: 734px; */
@@ -323,6 +323,7 @@ main {
   grid-row: 2/3;
   grid-column: 2/3;
   width: 700px;
+  height: 130px;
 }
 
 .modal-content-text {
@@ -340,7 +341,7 @@ main {
 }
 
 .swiper-pagination {
-  grid-row: 4/5;
+  grid-row: 5/6;
   grid-column: 1/4;
   color: black;
   justify-self: center;
@@ -487,7 +488,7 @@ main {
   grid-row: 1/2;
   text-align: center;
   justify-self: center;
-  padding-top: 100px;
+  padding-top: 60px;
   font-size: 30px;
   font-weight: 700;
 }
@@ -792,19 +793,17 @@ main {
 
   /* Modal Content/Box */
   .modal-content-box {
-    position: relative;
-    margin: 500px 11px;
+    /* position: relative; */
+    margin: 100px 19px;
     padding: 20px;
     width: 335px;
     height: 381px;
-    z-index: 200;
+    z-index: 500;
   }
 
   .modal-content-grid {
-    display: grid;
-    grid-template-rows: auto auto auto 50px;
     grid-template-columns: auto;
-    grid-row-gap: 15px;
+    grid-row-gap: 10px;
   }
 
   .modal-content-title {
@@ -818,12 +817,15 @@ main {
     grid-row: 2/3;
     grid-column: 1/2;
     width: 300px;
+    height: auto;
   }
 
   .modal-content-text {
     grid-row: 3/4;
     grid-column: 1/2;
     width: 300px;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .swiper-pagination {
