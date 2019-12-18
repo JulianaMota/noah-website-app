@@ -19,19 +19,31 @@ function changeToProfile(event) {
   const profile = document.querySelector("[data-form=profile]");
   profile.classList.add("moveProfile");
 }
-console.log(form.elements);
+
 
 form.addEventListener("submit", e => {
   form.elements.submit.disabled = true; //don't let the user click second time
-  console.log(e);
+
   e.preventDefault(); //dot let the event reload page
   const obj = {
     UserName: form.elements.firstName.value,
     UserEmail: form.elements.email.value,
     UserProfessionArea: form.elements.profession.value
   };
-  console.log(obj);
+  // console.log(obj);
   post(obj);
+});
+
+const formList = document.querySelectorAll("input");
+formList.forEach(element => {
+  // console.log(element);
+  element.addEventListener("blur", e => {
+    if (element.checkValidity()) {
+      element.style.boxShadow = "0px 0px 0px 0px transparent";
+    } else {
+      element.style.boxShadow = "4px 4px 0px 4px rgba(244,161,0,1)";
+    }
+  });
 });
 
 function post(obj) {
@@ -46,10 +58,7 @@ function post(obj) {
   })
     .then(res => res.json())
     .then(data => {
-      // const acountComplete = document.querySelector("#account-created");
-      // acountComplete.classList.add("appearArticle");
-      // const form = document.querySelector("#acount-form");
-      // form.style.transform = "translate3d(0, 0, 0)";
-      // form.classList.add("hideArticle");
+      const signUpModal = document.querySelector(".modal-info");
+      signUpModal.style.visibility = "visible";
     });
 }

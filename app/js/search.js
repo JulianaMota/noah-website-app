@@ -37,13 +37,14 @@ function displayVolunteers(volunteer) {
   dataFields.forEach(element => {
     const property = element.dataset.field;
     if (volunteer[property] === undefined) {
-      console.log(element);
+      // console.log(element);
       element.style.display = "none";
     }
 
     if (element.dataset.field === "UserImage") {
+      // console.log(volunteer[property] === undefined);
       if (volunteer[property] === undefined) {
-        element.src = "./app-images/flower_83.png";
+        element.style.display = "block";
       } else {
         element.src =
           "https://anime-8835.restdb.io/media/" +

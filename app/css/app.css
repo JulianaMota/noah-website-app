@@ -171,6 +171,9 @@ button {
 input:focus {
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
 }
+/* input:invalid {
+  box-shadow: 2px 3px 4px var(--color-yellow);
+} */
 input[type="submit"]:focus {
   background-color: var(--color-yellow);
   border-color: var(--color-yellow);
@@ -590,26 +593,27 @@ fieldset {
   margin-top: 20px;
 }
 #submit {
-  justify-self: end;
-  padding-top: 15px;
+  /* justify-self: end; */
+  padding-top: 10px;
 }
 
 /****************App Header****************/
 .app-header {
   position: fixed;
   top: 0;
-  background-image: url(../app-images/back-app_751x307.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top;
   width: 100vw;
   height: 25vh;
   z-index: 3;
 }
+.header-back {
+  width: 100%;
+}
 .app-logo {
-  position: absolute;
+  position: fixed;
   width: 70px;
   padding: 10px;
+  top: 0;
+  left: 0;
 }
 .app-header h1 {
   position: absolute;
@@ -641,6 +645,16 @@ fieldset {
   width: 35px;
   fill: var(--color-green);
   transition: 1s;
+}
+@media (min-width: 400px) {
+  .app-header button {
+    top: 60%;
+  }
+}
+@media (min-width: 500px) {
+  .app-header button {
+    top: 70%;
+  }
 }
 
 /****************App Nav****************/
@@ -689,6 +703,16 @@ fieldset {
   padding: 0 20px;
   margin-bottom: 70px;
   position: relative;
+}
+@media (min-width: 400px) {
+  .app-main {
+    margin-top: 30vh;
+  }
+}
+@media (min-width: 500px) {
+  .app-main {
+    margin-top: 35vh;
+  }
 }
 
 /***************Search button *******/
@@ -1285,21 +1309,23 @@ textarea:focus {
   line-height: 1.3;
   padding-top: 20px;
 }
+.modal-info .signup-modal {
+  height: 20%;
+}
+.modal-info .signup-modal h2 {
+  font-family: var(--display-font);
+  font-size: var(--font-size-subtitle2);
+  padding-bottom: 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+.modal-info .signup-modal a {
+  justify-self: center;
+}
 
 /****************Desktop****************/
 @media (min-width: 641px) {
   * {
     display: none;
-  }
-  body {
-    /* background-color: black; */
-    /* padding: 0 10%; */
-    /* margin: 0 20px; */
-    width: 50vw;
-    margin: auto;
-    position: relative;
-  }
-  .app-header {
-    width: 50vw;
   }
 }

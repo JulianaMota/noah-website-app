@@ -91,13 +91,13 @@ function openModalCph(event) {
   const currentBtn = event.target.dataset.btn;
 
   function fiterSildes(group) {
-    console.log(group);
+    // console.log(group);
     return group.City === currentBtn;
   }
 
   filterArr = groupsArr.filter(fiterSildes);
   displayGroups(filterArr);
-  console.log(filterArr);
+  // console.log(filterArr);
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
@@ -111,14 +111,14 @@ function openModalAlb() {
   favoriteClick();
 
   const currentBtn = event.target.dataset.btn;
-  console.log(currentBtn);
+  // console.log(currentBtn);
   function filterSlides(group) {
     // console.log(group);
     return group.City === currentBtn;
   }
   filterArr = groupsArr.filter(filterSlides);
   displayGroups(filterArr);
-  console.log(filterArr);
+  // console.log(filterArr);
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
@@ -132,14 +132,14 @@ function openModalOde() {
   favoriteClick();
 
   const currentBtn = event.target.dataset.btn;
-  console.log(currentBtn);
+  // console.log(currentBtn);
   function filterSlides(group) {
-    console.log(group);
+    // console.log(group);
     return group.City === currentBtn;
   }
   filterArr = groupsArr.filter(filterSlides);
   displayGroups(filterArr);
-  console.log(filterArr);
+  // console.log(filterArr);
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
@@ -153,14 +153,14 @@ function openModalAah() {
   favoriteClick();
 
   const currentBtn = event.target.dataset.btn;
-  console.log(currentBtn);
+  // console.log(currentBtn);
   function filterSlides(group) {
-    console.log(group);
+    // console.log(group);
     return group.City === currentBtn;
   }
   filterArr = groupsArr.filter(filterSlides);
   displayGroups(filterArr);
-  console.log(filterArr);
+  // console.log(filterArr);
 
   const swiper = new Swiper(".swiper-container", {
     spaceBetween: 27,
