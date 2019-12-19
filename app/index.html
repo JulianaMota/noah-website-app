@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>Welcome Noah Volunteers</title>
+  </head>
+  <body id="welcome-page">
+    <header>
+      <img src="app-images/noah-logo_140x73.png" alt="noah volunteers logo" />
+    </header>
+    <main>
+      <section class="welcome-section">
+        <h1>Welcome</h1>
+        <img
+          src="app-images/illustration-landing-page_1004x979.png"
+          alt="welcome illustration"
+        />
+      </section>
+      <section class="sign-section">
+        <a class="btn-back btn" href="signup.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="9.638"
+            height="15.276"
+            viewBox="0 0 9.638 15.276"
+          >
+            <g transform="translate(1.5 2.119)">
+              <path
+                d="M1459.788,886.591l-6.019,5.519,6.019,5.519"
+                transform="translate(-1453.769 -886.591)"
+                fill="none"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+          <p>sign up</p>
+        </a>
+        <a class="btn-no-back btn" href="signin.html">
+          <p>sign in</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="9.638"
+            height="15.276"
+            viewBox="0 0 9.638 15.276"
+          >
+            <g transform="translate(8.138 13.157) rotate(180)">
+              <path
+                d="M1459.788,886.591l-6.019,5.519,6.019,5.519"
+                transform="translate(-1453.769 -886.591)"
+                fill="none"
+                stroke="#1c7b5b"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+        </a>
+      </section>
+    </main>
+    <script>
+      window.addEventListener("DOMContentLoaded", start);
+      function start() {
+        alert(
+          "This webpage is only visible in mobile version, since is made to be an app! For that inspect in desktop or open on your mobile phone."
+        );
+      }
+    </script>
+  </body>
+</html>

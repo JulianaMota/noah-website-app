@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>Sign up to Noah Volunteers</title>
+  </head>
+  <body id="sign-body">
+    <header>
+      <img
+        class="noah-logo"
+        src="app-images/noah-logo_140x73.png"
+        alt="noah volunteers logo"
+      />
+      <h1 data-title="signUp">Sign up</h1>
+      <img
+        class="heart-leaf"
+        src="app-images/heart-leaf_35x59.png"
+        alt="heart-leaf"
+      />
+    </header>
+
+    <main class="sign-main">
+        
+      <form action="">
+        <section class="signup-grid" data-form="signUp">
+          <section>
+            <div class="sign-social">
+              <a href="#">
+                <img src="app-images/facebook_40x40.png" alt="facebook logo" />
+              </a>
+              <a href="#">
+                <img src="app-images/google_40x40.png" alt="google logo" />
+              </a>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254.017 32.044">
+              <path
+                d="M3468.421,589.418h106.017"
+                transform="translate(-3468.421 -574)"
+                fill="none"
+                stroke="#1c7b5b"
+                stroke-width="1"
+              />
+              <path
+                d="M3468.421,589.418h106.017"
+                transform="translate(-3320.421 -574)"
+                fill="none"
+                stroke="#1c7b5b"
+                stroke-width="1"
+              />
+              <g
+                transform="translate(111.579)"
+                fill="#fff"
+                stroke="#1c7b5b"
+                stroke-width="1"
+              >
+                <circle cx="15.5" cy="15.5" r="15.5" stroke="none" />
+                <circle cx="15.5" cy="15.5" r="15" fill="none" />
+              </g>
+              <text
+                transform="translate(115.578 6.044)"
+                fill="#1c7b5b"
+                font-size="14"
+                font-family="Roboto-Regular, Roboto"
+              >
+                <tspan x="5.139" y="13">or</tspan>
+              </text>
+            </svg>
+          </section>
+      
+          <label for="email" class="form-field">
+            <img src="app-images/mail_36x28.png" alt="email icon" />
+            <p>Email</p>
+            <input name="email" id="email" type="email" placeholder="x@x.xx" required/>
+          </label>
+          <label for="pass" class="form-field">
+            <img src="app-images/lock_36x28.png" alt="pass icon"/>
+            <p>Password</p>
+            <input name="pass" id="pass" type="password" placeholder="xxxxxxxx"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+          </label>
+          <label for="repeat-pass" class="form-field">
+            <img src="app-images/lock_36x28.png" alt="pass icon"/>
+            <p>Password</p>
+            <input name="repeat-pass" id="repeatPass" type="password" placeholder="xxxxxxxx"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+          </label>
+          <a href="signin.html">Already have an account. <span>Sign in</span></a>
+          <button class="signup-arrow" data-btn="arrow">
+            <img src="app-images/arrow-signup_38.png" alt="arrow">
+          </button>
+        </section>
+        <section class="profile-grid" data-form="profile">
+          <div class="image-form">
+            <img src="app-images/turtle_83.png" alt="pass icon" />
+            <p class="field-title">User Image</p>
+            <p class="explain-text">Choose your profile icon below</p>
+            <div>
+                <input class="user-image" type="radio" name='user-image' id="flower"/><label for="flower"></label> 
+                <input class="user-image" type="radio" name='user-image' id="rhino"/><label for="rhino"></label> 
+                <input class="user-image" type="radio" name='user-image' id="tree"/><label for="tree"></label> 
+                <input class="user-image" type="radio" name='user-image' id="turtle"/><label for="turtle"></label> 
+            </div>
+          </div>
+          <label for="firstName" class="form-field">
+            <img src="app-images/profile_32.png" alt="user icon" />
+            <p>First Name
+            </p>
+            <input name="firstName" id="firstName" type="text" placeholder="xxxx" required/>
+          </label>
+          <label for="lastName" class="form-field">
+            <img src="app-images/profile_32.png" alt="user icon"/>
+            <p>Last Name
+            </p>
+            <input name="lastName" id="lastName" type="text" placeholder="xxxx"  required/>
+          </label>
+          <label for="postNum" class="form-field">
+            <img src="app-images/house_32.png" alt="user icon" />
+            <p>Post Number
+            </p>
+            <input name="postNum" id="postNum" type="number" placeholder="xxxx"  required min="4"/>
+          </label>
+          <label for="phoneNum" class="form-field">
+            <img src="app-images/bag_32.png" alt="user icon" />
+            <p>Phone Number
+            </p>
+            <input name="phoneNum" id="phoneNum" type="number" placeholder="xxxxxxxx" required min="8"/>
+          </label>
+          <label for="profession" class="form-field">
+            <img src="app-images/lock_36x28.png" alt="user icon" />
+            <p>Profession Area</p>
+            <select id="profession" class="arrow">
+              <option class="select-placeholder" disabled selected value> select an option </option>
+              <option>Student</option>
+              <option>IT Software</option>
+              <option>Sales and client care</option>
+              <option>Operations</option>
+              <option>Marketing Language and Communication</option>
+              <option>Accounting & Finance</option>
+              <option>Social Care</option>
+              <option>Electrotechnology</option>
+              <option>Business & Strategy</option>
+              <option>Medicine & Health</option>
+              <option>Supply Chain & Logistics</option>
+              <option>Human Resources</option>
+              <option>Education & training</option>
+              <option>Legal</option>
+              <option>Architecture & Construction</option>
+              <option>Administration</option>
+              <option>Retail</option>
+              <option>Creative & design</option>
+              <option>Quality assurance & risk</option>
+              <option>Climate, Environment & Sustainability</option>
+              <option>Hospitality & Tourism</option>
+              <option>Biology, Biotech & Biochemistry</option>
+              <option>Chemistry</option>
+              <option>Culture & Arts</option>
+              <option>Consulting</option>
+              <option>Real Estate</option>
+              <option>Agriculture, forestry & marine</option>
+              <option>Oil, Gas & Energy</option>
+              <option>Society & Politics</option>
+              <option>Mathematics & Physics</option>
+              <option>Veterinary & Animal Sciences</option>
+              <option>Transport and services</option>
+              <option>Beauty and Care</option>
+            </select>
+          </label>
+          <fieldset>
+            <legend class="field-title">What other skills do you have to help Noah?</legend>
+            <div class="sg-grid">
+           
+                <input type="checkbox" id="design" name="design" /> 
+                <label for="design" class="form-checkbox-sg">
+                  Design
+                </label>
+           
+                <input type="checkbox" id="writing" name="writing" /> 
+                <label for="writing" class="form-checkbox-sg">
+                  Writing 
+                </label>
+
+                <input type="checkbox" id="web-dev" name="web-dev" /> 
+                <label for="web-dev" class="form-checkbox-sg">
+                Website Dev
+                </label>
+ 
+                <input type="checkbox" id="illus" name="illus" /> 
+                <label for="illus" class="form-checkbox-sg">
+                Illustrations 
+                </label>
+
+                <input type="checkbox" id="finance" name="finance" /> 
+                <label for="finance" class="form-checkbox-sg">
+                Finance
+                </label>
+
+                <input type="checkbox" id="fund" name="fund" /> 
+                <label for="fund" class="form-checkbox-sg">
+                Fundraising
+                </label>
+
+                <input type="checkbox" id="research" name="research" /> 
+                <label for="research" class="form-checkbox-sg">
+                Research
+                </label>
+
+                <input type="checkbox" id="interviews" name="interviews" /> 
+                <label for="interviews" class="form-checkbox-sg">
+                Interviews
+                </label>
+
+                <input type="checkbox" id="video" name="video" />
+                <label for="video" class="form-checkbox-sg">
+                Video 
+                </label>
+
+                <input type="checkbox" id="anim" name="anim" /> 
+                <label for="anim" class="form-checkbox-sg">
+                Animation
+                </label>
+
+              </div>
+          </fieldset>
+          <fieldset>
+              <legend class="field-title">Choose 1 or 2 NOAH groups you want to support.</legend>
+              <div class="sg-grid">
+
+                <input type="checkbox" id="eco-sex" name="eco-sex" /> 
+                <label for="eco-sex" class="form-checkbox-sg">
+                    Eco-sex
+                </label>
+
+                <input type="checkbox" id="solidarity" name="solidarity" />
+                <label for="solidarity" class="form-checkbox-sg">
+                  International solidarity 
+                </label>
+
+                <input type="checkbox" id="g-formation" name="g-formation" />
+                <label for="g-formation" class="form-checkbox-sg">
+                  Green formation 
+                </label>
+
+                <input type="checkbox" id="economic" name="economic" />
+                <label for="economic" class="form-checkbox-sg">
+                  Economic Justice 
+                </label>
+
+                <input type="checkbox" id="climate" name="climate" />
+                <label for="climate" class="form-checkbox-sg">
+                  Climate justice + Energy
+                </label>
+
+                <input type="checkbox" id="forest-bio" name="forest-bio" /> 
+                <label for="forest-bio" class="form-checkbox-sg">Forests + Biodiversity</label>
+
+                <input type="checkbox" id="food" name="food" />
+                <label for="food" class="form-checkbox-sg">Food sovereignty</label>
+
+                <input type="checkbox" id="transport" name="transport" />
+                <label for="transport" class="form-checkbox-sg">Transport</label>
+
+                <p class="explain-text group-text">You can always decide after if you are in doubt.</p>
+              </div>
+          
+            </fieldset>
+          </fieldset>
+          <!-- <input id="submit" type="image" src="app-images/arrow-signup_38.png" alt="Submit"  required> -->
+          <input class="btn-back submit" type="submit" value="sign up" id="submit">
+        </section>
+      </form>
+    </main>
+
+    <section class="modal-info">
+      <div class="signup-modal">
+        <h2>Your sign up was SUCCESSFUL</h2>
+        <a class="btn-back" href="search.html">Continue to the app</a>
+      </div>
+    </section>
+
+    <script src="js/signup.js"></script>
+  </body>
+</html>
