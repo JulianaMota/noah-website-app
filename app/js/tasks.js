@@ -8,6 +8,7 @@ const modalText = document.querySelector(".modal-info p");
 
 window.addEventListener("DOMContentLoaded", init);
 
+// function start when document loads
 function init() {
   document
     .querySelector("[data-btn=tasks]")
@@ -23,6 +24,7 @@ function init() {
   get();
 }
 
+//function to fetch content
 function get() {
   fetch(baseLink + "noah-tasks", {
     method: "get",
@@ -71,6 +73,7 @@ function get() {
     });
 }
 
+//function to filter tasks list when click on button
 function getTasks() {
   btnAdd.style.display = "none";
   const btnList = document.querySelectorAll("[data-btn]");
@@ -97,6 +100,7 @@ function getTasks() {
     "Here you can apply to a task given by Noah members. After that, you will receive an email with more details of the work. By clicking in the heart you can save in favorites";
 }
 
+//function to filter activities list when click on button
 function getActiv() {
   btnAdd.style.display = "none";
   const btnList = document.querySelectorAll("[data-btn]");
@@ -123,6 +127,7 @@ function getActiv() {
     "Here you can see and join NOAH activities during the whole year. If you are in doubt, click just on the heart icon and save on your favourites list.";
 }
 
+//function to filter ideas list when click on button
 function getIdeas() {
   btnAdd.style.display = "flex";
   const btnList = document.querySelectorAll("[data-btn]");
@@ -149,6 +154,7 @@ function getIdeas() {
     "Here you have ideas from volunteers that you can vote for future activities or tasks. You can also save on favorites with the heart icon and add your own idea by clicking in the plus button.";
 }
 
+//function to display ideas content
 function displayIdeas(idea) {
   //   console.log(idea);
   //   ideasArr = [];
@@ -168,6 +174,7 @@ function displayIdeas(idea) {
   //   console.log(ideasArr);
 }
 
+//function to display tasks content
 function displayTasks(task) {
   const clone = document
     .querySelector("[data-template=tasks]")
@@ -185,6 +192,7 @@ function displayTasks(task) {
   //   console.log(taskArr);
 }
 
+//function to display activities content
 function displayActivities(activ) {
   //   activitiesArr = [];
   //   console.log(activ);

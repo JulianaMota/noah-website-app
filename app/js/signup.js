@@ -5,11 +5,13 @@ const form = document.querySelector("form");
 //function window event listener when load page function init
 window.addEventListener("DOMContentLoaded", init);
 
+// function start when document loads
 function init() {
   const signupArrow = document.querySelector("[data-btn=arrow]");
   signupArrow.addEventListener("click", changeToProfile);
 }
 
+// function t change form signup info to profile info
 function changeToProfile(event) {
   event.preventDefault();
   const title = document.querySelector("[data-title=signUp]");
@@ -20,7 +22,7 @@ function changeToProfile(event) {
   profile.classList.add("moveProfile");
 }
 
-
+// Event to get all info given in the sign up form into an object
 form.addEventListener("submit", e => {
   form.elements.submit.disabled = true; //don't let the user click second time
 
@@ -34,6 +36,7 @@ form.addEventListener("submit", e => {
   post(obj);
 });
 
+// Events of invalid input styling for sign up when blur
 const formList = document.querySelectorAll("input");
 formList.forEach(element => {
   // console.log(element);
@@ -46,6 +49,7 @@ formList.forEach(element => {
   });
 });
 
+// function to post signup form data and open success sign up modal
 function post(obj) {
   fetch("https://anime-8835.restdb.io/rest/noah-volunteers", {
     method: "post",

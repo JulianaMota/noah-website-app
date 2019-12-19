@@ -10,6 +10,7 @@ const title = document.querySelector(".group-modal h2");
 //function window event listener when load page function init
 window.addEventListener("DOMContentLoaded", init);
 
+// function start when document loads
 function init() {
   document
     .querySelector(".group-modal")
@@ -26,6 +27,7 @@ function init() {
   get();
 }
 
+//function to fetch content
 function get() {
   // console.log(baseLink + "noah-groups");
   fetch(baseLink + "noah-groups", {
@@ -46,6 +48,7 @@ function get() {
     });
 }
 
+//display all volunteers
 function displayGroups(groupsArr) {
   document.querySelector("[data-list=groups]").innerHTML = "";
   groupsArr.forEach(group => {
@@ -76,11 +79,12 @@ function displayGroups(groupsArr) {
   });
 }
 
+//function to close modal
 function closeGroupModal(t) {
-  // document.querySelector("[data-list=groups]").innerHTML = "";
   groupModal.style.display = "none";
 }
 
+//function to open modal CPH and filter array of groups depending on the city name and start swiper
 function openModalCph(event) {
   filterArr = [];
   groupModal.style.display = "block";
@@ -105,6 +109,7 @@ function openModalCph(event) {
   });
 }
 
+//function to open modal Alborg and filter array of groups depending on the city name and start swiper
 function openModalAlb() {
   groupModal.style.display = "block";
   title.textContent = "Alborg";
@@ -126,6 +131,7 @@ function openModalAlb() {
   });
 }
 
+//function to open modal Odense and filter array of groups depending on the city name and start swiper
 function openModalOde() {
   groupModal.style.display = "block";
   title.textContent = "Odense";
@@ -147,6 +153,7 @@ function openModalOde() {
   });
 }
 
+//function to open modal Aahrus and filter array of groups depending on the city name and start swiper
 function openModalAah() {
   groupModal.style.display = "block";
   title.textContent = "Aahrus";

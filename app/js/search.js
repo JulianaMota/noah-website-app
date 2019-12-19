@@ -4,10 +4,12 @@ let volunteerArr;
 
 window.addEventListener("DOMContentLoaded", init);
 
+// function start when document loads
 function init() {
   get();
 }
 
+//function to fetch content
 function get() {
   // console.log(baseLink + "noah-volunteers");
   fetch(baseLink + "noah-volunteers", {
@@ -27,6 +29,7 @@ function get() {
     });
 }
 
+//display all volunteers
 function displayVolunteers(volunteer) {
   const clone = document.querySelector("template").content.cloneNode(true);
   // console.log(clone);
